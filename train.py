@@ -258,7 +258,7 @@ parser.add_argument("--local_rank", default=0, type=int)
 parser.add_argument("--use-multi-epochs-loader", action="store_true", default=False, help="use the multi-epochs-loader to save time at the beginning of every epoch")
 parser.add_argument("--torchscript", dest="torchscript", action="store_true", help="convert model torchscript for inference")
 parser.add_argument("--log-wandb", action="store_true", default=False, help="log training and validation metrics to wandb")
-parser.add_argument("--attention_mode", type=str, default="STAtten", help='choose one of methods: STAtten, SDT')
+parser.add_argument("--attention_mode", type=str, default="STAtten", help='choose one of methods: STAtten, obSTAtten, SDT')
 
 
 _logger = logging.getLogger("train")

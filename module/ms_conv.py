@@ -79,7 +79,7 @@ class MS_SSA_Conv(nn.Module):
         mode="direct_xor",
         dvs=False,
         layer=0,
-        attention_mode="T_STAtten",
+        attention_mode="STAtten",   # Changed from T_STAtten, was inconsistent with current code
         chunk_size=2,
         spike_mode="lif"
     ):
@@ -166,6 +166,8 @@ class MS_SSA_Conv(nn.Module):
         # Shape: (T B head N C//head)
 
         ###### Attention #####
+
+        ## STAtten Attention Mode
         if self.attention_mode == "STAtten":
             if self.dvs:
                 scaling_factor = 1 / (H*H*self.chunk_size)
@@ -210,7 +212,52 @@ class MS_SSA_Conv(nn.Module):
             )
 
 
-        """Spike-driven Transformer"""
+        ## obSTAtten Attention Mode (newly added) -- "overlappint block STAtten"
+        if self.attention_mode == "obSTAtten":
+            if self.dvs:
+                scaling_factor = 1 / (H*H*self.chunk_size)
+            else:
+                scaling_factor = 1 / H
+
+            # Vectorized Attention
+            num_chunks = T // self.chunk_size
+            # Reshape q, k, v to process all chunks at once: (num_chunks, B, num_heads, chunk_size, N, head_dim)
+            q_chunks = q.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
+            k_chunks = k.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
+            v_chunks = v.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
+
+            # Merge chunk_size and N dimensions: (num_chunks, B, num_heads, chunk_size * N, head_dim)
+            q_chunks = q_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
+            k_chunks = k_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
+            v_chunks = v_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
+
+            # Compute attention for all chunks simultaneously
+            attn = torch.matmul(k_chunks.transpose(-2, -1),
+                                v_chunks) * scaling_factor  # (num_chunks, B, num_heads, head_dim, head_dim)
+            out = torch.matmul(q_chunks, attn)  # (num_chunks, B, num_heads, chunk_size * N, head_dim)
+
+            # Reshape back to separate temporal and spatial dimensions
+            out = out.reshape(num_chunks, B, self.num_heads, self.chunk_size, N, head_dim).permute(0, 3, 1, 2, 4, 5)
+            # Flatten chunks back to T: (T, B, num_heads, N, head_dim)
+            output = out.reshape(T, B, self.num_heads, N, head_dim)
+
+            x = output.transpose(4,3).reshape(T, B, C, N).contiguous() # (T, B, head, C//h, N)
+            x = self.attn_lif(x).reshape(T, B, C, H, W)
+            if self.dvs:
+                x = x.mul(x_pool)
+                x = x + x_pool
+
+            if hook is not None:
+                hook[self._get_name() + str(self.layer) + "_after_qkv"] = x
+
+            x = (
+                self.proj_bn(self.proj_conv(x.flatten(0, 1)))
+                .reshape(T, B, C, H, W)
+                .contiguous()
+            )
+
+
+        ## Spike-driven Transformer Attension Mode (Control)
         if self.attention_mode == "SDT":
             kv = k.mul(v)
             if hook is not None:
@@ -234,7 +281,7 @@ class MS_SSA_Conv(nn.Module):
                 .contiguous()
             )
 
-        assert self.attention_mode not in ["STAtten, SDT"] 
+        assert self.attention_mode not in ["STAtten, obSTAtten, SDT"] 
 
         x = x + identity
         return x, v, hook
