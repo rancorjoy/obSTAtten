@@ -1,1 +1,1 @@
-Will add later, modified STAtten for overlapping bins
+Modified-STAtten-with-Overlapping Bins
