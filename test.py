@@ -360,7 +360,8 @@ def main():
             args.resume,
             #optimizer=None if args.no_resume_opt else optimizer, # Commented out because this seems broken upon testing
             optimizer=None,
-            loss_scaler=None if args.no_resume_opt else loss_scaler,
+            #loss_scaler=None if args.no_resume_opt else loss_scaler,   # This line too
+            loss_scaler=None,  
             log_info=args.local_rank == 0,
         )
 
