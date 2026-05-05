@@ -264,9 +264,9 @@ class MS_SSA_Conv(nn.Module):
                 count[i : i + self.chunk_size] += 1
 
             # Divide each timestep by how many chunks contributed to it
-            # count shape: (T,) → reshape to (T,1,1,1,1) to broadcast
+            # count shape: (T,) -> reshape to (T,1,1,1,1) to broadcast
             output = output_acc / count.reshape(T, 1, 1, 1, 1)
-            # shape: (T, B, num_heads, N, head_dim)  ← same as STAtten output
+            # shape: (T, B, num_heads, N, head_dim) is same as STAtten output
 
             # Everything below is identical to STAtten
             x = output.transpose(4, 3).reshape(T, B, C, N).contiguous()
