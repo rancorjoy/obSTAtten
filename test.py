@@ -359,7 +359,7 @@ def main():
             model,
             args.resume,
             #optimizer=None if args.no_resume_opt else optimizer, # Commented out because this seems broken upon testing
-            optimizer=None
+            optimizer=None,
             loss_scaler=None if args.no_resume_opt else loss_scaler,
             log_info=args.local_rank == 0,
         )
