@@ -90,6 +90,7 @@ parser.add_argument("--num-classes", type=int, default=1000, metavar="N", help="
 parser.add_argument("--time-steps", type=int, default=4, metavar="N")
 parser.add_argument("--num-heads", type=int, default=8, metavar="N")
 parser.add_argument("--patch-size", type=int, default=None, metavar="N", help="Image patch size")
+parser.add_argument("--chunk-size", type=int, default=2, metavar="N")                                   # This was missing and will help with obSTAtten
 parser.add_argument("--mlp-ratio", type=int, default=4, metavar="N", help="expand ration of embedding dimension in MLP block")
 parser.add_argument("--gp", default=None, type=str, metavar="POOL", help="Global pool type, one of (fast, avg, max, avgmax, avgmaxc). Model default if None.")
 parser.add_argument("--img-size", type=int, default=None, metavar="N", help="Image patch size (default: None => model default)")
@@ -169,7 +170,7 @@ parser.add_argument("--use-multi-epochs-loader", action="store_true", default=Fa
 parser.add_argument("--large-valid", action="store_true", default=False, help="use the multi-epochs-loader to save time at the beginning of every epoch")
 parser.add_argument("--torchscript", dest="torchscript", action="store_true", help="convert model torchscript for inference")
 parser.add_argument("--log-wandb", action="store_true", default=False, help="log training and validation metrics to wandb")
-parser.add_argument("--attention_mode", type=str, default="T_STAtten", help='choose one of methods: J_STAtten, T_STAtten, N_STAtten, SDT')
+parser.add_argument("--attention_mode", type=str, default="STAtten", help='choose one of methods: STAtten, SDT')    # Removed obsolete STAtten models
 
 _logger = logging.getLogger("valid")
 stream_handler = logging.StreamHandler()
@@ -259,6 +260,7 @@ def main():
         drop_rate=args.drop,
         drop_path_rate=args.drop_path,
         drop_block_rate=args.drop_block,
+        chunk_size=args.chunk_size,         # Newly added
         num_heads=args.num_heads,
         num_classes=args.num_classes,
         pooling_stat=args.pooling_stat,
@@ -332,15 +334,15 @@ def main():
         assert not args.sync_bn, "Cannot use SyncBatchNorm with torchscripted model"
         model = torch.jit.script(model)
 
-    # setup automatic mixed-precision (AMP) loss scaling and op casting
-    amp_autocast = suppress  # do nothing
-    loss_scaler = None
-    if use_amp == "apex":
-        model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
-        loss_scaler = ApexScaler()
-        if args.local_rank == 0:
-            _logger.info("Using NVIDIA APEX AMP. Training in mixed precision.")
-    elif use_amp == "native":
+    # setup automatic mixed-precision (AMP) loss scaling and op casting # This section is commented out as it is not supported in rest of code
+    #amp_autocast = suppress  # do nothing
+    #loss_scaler = None
+    #if use_amp == "apex":
+    #    model, optimizer = amp.initialize(model, optimizer, opt_level="O1")
+    #    loss_scaler = ApexScaler()
+    #    if args.local_rank == 0:
+    #        _logger.info("Using NVIDIA APEX AMP. Training in mixed precision.")
+    if use_amp == "native":
         amp_autocast = torch.cuda.amp.autocast
         loss_scaler = NativeScaler()
         if args.local_rank == 0:
@@ -386,7 +388,7 @@ def main():
         # NOTE: EMA model does not need to be wrapped by DDP
 
     # create the train and eval datasets
-    dataset_eval = None, None
+    dataset_eval = None
     if args.dataset == "cifar10-dvs":
         dataset = CIFAR10DVS(
             args.data_dir,
@@ -408,7 +410,7 @@ def main():
         dataset_eval = create_dataset(
             args.dataset,
             # root=args.data_dir,
-            root="/gpfs/gibbs/project/panda/shared/imagenet/",
+            root=args.data_dir,     # Was hardcoded when rest of codebase has soft-coded file location
             split=args.val_split,
             is_training=False,
             batch_size=args.batch_size,
