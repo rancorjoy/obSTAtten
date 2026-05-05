@@ -215,33 +215,61 @@ class MS_SSA_Conv(nn.Module):
         ## obSTAtten Attention Mode (newly added) -- "overlappint block STAtten"
         if self.attention_mode == "obSTAtten":
             if self.dvs:
-                scaling_factor = 1 / (H*H*self.chunk_size)
+                scaling_factor = 1 / (H * H * self.chunk_size)
             else:
                 scaling_factor = 1 / H
 
-            # Vectorized Attention
-            num_chunks = T // self.chunk_size
-            # Reshape q, k, v to process all chunks at once: (num_chunks, B, num_heads, chunk_size, N, head_dim)
-            q_chunks = q.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
-            k_chunks = k.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
-            v_chunks = v.view(num_chunks, self.chunk_size, B, self.num_heads, N, head_dim).permute(0, 2, 3, 1, 4, 5)
+            # This model produces number blocks that overlap by 1, there should be T - chunk_size + 1 chunks
+            num_chunks = T - self.chunk_size + 1
 
-            # Merge chunk_size and N dimensions: (num_chunks, B, num_heads, chunk_size * N, head_dim)
+            # Replace .view() with .unfold() as .view() only works for contiguous/non-overlapping memory
+            # .unfold() needs dimension, size and step to slide its window over a dimension
+            q_chunks = q.unfold(0, self.chunk_size, 1)
+            k_chunks = k.unfold(0, self.chunk_size, 1)
+            v_chunks = v.unfold(0, self.chunk_size, 1)
+            # shape: (num_chunks, B, num_heads, N, head_dim, chunk_size)
+
+            # STAtten permutes (num_chunks, chunk_size, B, num_heads, N, head_dim) to (num_chunks, B, num_heads, chunk_size, N, head_dim)
+            # .unfold() puts chunk_size at the END so we move it to position 3, the new data must be rearranged to match
+            q_chunks = q_chunks.permute(0, 1, 2, 5, 3, 4)
+            k_chunks = k_chunks.permute(0, 1, 2, 5, 3, 4)
+            v_chunks = v_chunks.permute(0, 1, 2, 5, 3, 4)
+            # shape: (num_chunks, B, num_heads, chunk_size, N, head_dim)
+
+            # Below, all merge + attention math is IDENTICAL to STAtten because each chunk has the same shape regardless of how it was built.
+
+            # Merge chunk_size and N: (num_chunks, B, num_heads, chunk_size*N, head_dim)
             q_chunks = q_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
             k_chunks = k_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
             v_chunks = v_chunks.reshape(num_chunks, B, self.num_heads, self.chunk_size * N, head_dim)
 
-            # Compute attention for all chunks simultaneously
+            # Spike-driven attention: Q @ (K^T @ V)
             attn = torch.matmul(k_chunks.transpose(-2, -1),
                                 v_chunks) * scaling_factor  # (num_chunks, B, num_heads, head_dim, head_dim)
-            out = torch.matmul(q_chunks, attn)  # (num_chunks, B, num_heads, chunk_size * N, head_dim)
+            out = torch.matmul(q_chunks, attn)              # (num_chunks, B, num_heads, chunk_size*N, head_dim)
 
-            # Reshape back to separate temporal and spatial dimensions
-            out = out.reshape(num_chunks, B, self.num_heads, self.chunk_size, N, head_dim).permute(0, 3, 1, 2, 4, 5)
-            # Flatten chunks back to T: (T, B, num_heads, N, head_dim)
-            output = out.reshape(T, B, self.num_heads, N, head_dim)
+            # Split chunk_size back out from N
+            out = out.reshape(num_chunks, B, self.num_heads, self.chunk_size, N, head_dim)
+            # shape: (num_chunks, B, num_heads, chunk_size, N, head_dim)
 
-            x = output.transpose(4,3).reshape(T, B, C, N).contiguous() # (T, B, head, C//h, N)
+            # Unlike in STAtten where each time-step is unique to one chunk, obSTAtten has overlap
+            # The output from each time-step should be the average of the two places it appears
+            output_acc = torch.zeros(T, B, self.num_heads, N, head_dim,
+                                     device=x.device, dtype=out.dtype)
+            count = torch.zeros(T, device=x.device, dtype=out.dtype)
+
+            for i in range(num_chunks):
+                # chunk i covers timesteps [i, i+1, ..., i+chunk_size-1]
+                output_acc[i : i + self.chunk_size] += out[i].permute(3, 0, 1, 2, 4)
+                count[i : i + self.chunk_size] += 1
+
+            # Divide each timestep by how many chunks contributed to it
+            # count shape: (T,) → reshape to (T,1,1,1,1) to broadcast
+            output = output_acc / count.reshape(T, 1, 1, 1, 1)
+            # shape: (T, B, num_heads, N, head_dim)  ← same as STAtten output
+
+            # Everything below is identical to STAtten
+            x = output.transpose(4, 3).reshape(T, B, C, N).contiguous()
             x = self.attn_lif(x).reshape(T, B, C, H, W)
             if self.dvs:
                 x = x.mul(x_pool)
