@@ -1,1 +1,1 @@
-Modified-STAtten-with-Overlapping Bins
+Modified-STAtten-with-Overlapping Blocks

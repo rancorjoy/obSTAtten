@@ -12,6 +12,8 @@ from spikingjelly.clock_driven import functional
 from spikingjelly.datasets.cifar10_dvs import CIFAR10DVS
 from spikingjelly.datasets.n_caltech101 import NCaltech101
 
+from model import spikeformer  # Newly added, missing from original file
+
 import torch
 import torch.nn as nn
 from torch.nn.parallel import DistributedDataParallel as NativeDDP
