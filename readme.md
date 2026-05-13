@@ -51,6 +51,7 @@ torchrun --nproc_per_node=1 train.py \
 This will start training a model using STAtten attention, with dim=512, spike_mode=lif using CIFAR10. Any train file in the /conf file tree can be used instead of 'conf/cifar10/2_512_200E_t4.yml' which allows different datasets (eg CIFAR10-DVS) and dimention sizes to be run. Note that spike-mode (lif or plif) and attention_mode (SDT, STAtten, obSTAtten) can all be chosen regardless of which train file is selected.
 
 ## Output Data
+When a model is trained, it will output into its own folder inside of output/train. In this folder I left the generated folders of all model training runs perfromed for this paper project, the model files have been removed but the log data remains. I created a tool called analyze_runs.ipynb which sits in output/train. When run with Jupyter Notebook it will generate a folder output/train/data which contains CSV files for all current runs, and it will display numerous plots for each run to help debug, troubleshoot, or simply admire your data. The file analyze_runs.ipynb does not need to be moved, just open Jupyter notebook and run it!
 
 ## Ackonwledgements
 This project is based on this GitHub Repository: https://github.com/Intelligent-Computing-Lab-Panda/STAtten
