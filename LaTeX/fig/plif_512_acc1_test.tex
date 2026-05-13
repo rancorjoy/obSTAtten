@@ -1,0 +1,70 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{}}}
+
+% Resolves datapath when this file is being rendered alone
+\ifdefined\subfilesmaindocument\else
+  \renewcommand{\datapath}{../../output/train/data}
+  
+  	% Preview plot dimensions
+  	\def\plotlarge{}  % comment out for small
+	\ifdefined\plotlarge
+  		\newcommand{\plotxscale}{1.8}
+  		\newcommand{\plotyscale}{0.6}
+	\else
+  		\newcommand{\plotxscale}{0.9}
+  		\newcommand{\plotyscale}{0.5}
+	\fi
+\fi
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}
+  [			% Plot Settings
+    width=\plotxscale\linewidth,
+  	height=\plotyscale\linewidth,
+    xlabel={Epoch},
+    ylabel={Accuracy (\%)},
+    xmin=100, xmax=210,
+    ymin=87, ymax=96,
+    grid=minor,
+    legend pos=south east,
+  ]				% Trace Settings
+	\addplot[
+  		%mark = *,
+  		thin,
+  		blue,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={acc1}
+		] {\datapath/obSTAtten_512_plif_cifar10_test.csv};\addlegendentry{obSTAtten};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		green!50!black,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={acc1}
+		] {\datapath/STAtten_512_plif_cifar10_test.csv};\addlegendentry{STAtten};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		orange,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={acc1}
+		] {\datapath/SDT_512_plif_cifar10_test.csv};\addlegendentry{SDT};
+		
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

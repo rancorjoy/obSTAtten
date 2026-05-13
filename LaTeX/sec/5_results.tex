@@ -10,8 +10,11 @@
 
 \section{Results}
 \label{sec:res}
+After completing 12 210-epoch training runs on three attention models (SDT, STAtten and obSTAtten) for four parameters some interesting patterns have been observed.
 
-\noindent Contents Here
+\subsection{Tabulated Results}
+\label{sec:tabRes}
+When comparing best Top-1 accuracy the default attention model (SDT) did surprisingly well when the model dimension was set to $d=256$. This was an unexpected result, however in conjunction with another piece of data it tells an interesting story. For the $d=256$, LIF training run notice that obSTAtten and STAtten perform identically, and they peak at the same epoch. This was a suspicious result, as such the obSTAtten condition was trained twice to be sure, and the result was the same both times. Both of these results hint towards the idea that when $d=256$, the model is not large enough to benefit from richer temporal context as its main accuracy bottleneck is its size. In these cases there is no clear reason to use spatial-temporal attention of either kind for static input. It should be noted that in the $d=256$ PLIF case obSTATTen did outperform STAtten.
 
 \begin{table}[h]\centering
 \caption{Dim-256 LIF Results}
@@ -21,17 +24,19 @@
 \end{table}
 
 \begin{table}[h]\centering
-\caption{Dim-512 LIF Results}
-\vspace{-0.75\baselineskip}
-\small
-\subfile{../fig/lif_512_tab}
-\end{table}
-
-\begin{table}[h]\centering
 \caption{Dim-256 PLIF Results}
 \vspace{-0.75\baselineskip}
 \small
 \subfile{../fig/plif_256_tab}
+\end{table}
+
+\par When the model dimension is increased to $d=512$ more interesting behavior can be observed. When trained using LIF neurons obSTAtten clearly outperforms STAtten, peaks at an earlier epoch and trains slightly faster. When trained using PLIF neurons however, STAtten slightly outperforms obSTAtten and trains slightly faster, but obSTAtten still peaks at an earlier epoch.
+
+\begin{table}[h]\centering
+\caption{Dim-512 LIF Results}
+\vspace{-0.75\baselineskip}
+\small
+\subfile{../fig/lif_512_tab}
 \end{table}
 
 \begin{table}[h]\centering
@@ -40,21 +45,24 @@
 \small
 \subfile{../fig/plif_512_tab}
 \end{table}
+\input{chosen_plots}
 
-%\newcommand{\plotxscale}{\largeplotxscale}
-%\newcommand{\plotyscale}{\largeplotyscale}
-%\begin{figure*}[t]
-%  \centering
-%  \subfile{../fig/lif_256_acc1_test}
-%  \caption{LIF Model Test accuracy on CIFAR-10}
-%  \label{fig:lif_256_acc1_test}
-%\end{figure*}
+\subsection{512-dim, LIF Training Times per Epoch}
+When STAtten and obSTAtten were trained on CIFAR10 for the conditions 512-dim and LIF neurons, obSTAtten comparatively did the best of the four cases. During this experiment the training time per epoch for all three attention models is plotted in Figure~\ref{fig:lif_512_train_time}. It can be seen around epoch 140 obSTAtten becomes slightly slower-to-train than STAtten, however it quickly recovers and never trains as slowly as SDT did. After its recovery it appears to have a similar training rate to STAtten, showing it only has significantly faster training times in the first 100 or so epochs.
+
+\subsection{256-dim, LIF STAtten obSTAtten Convergence}
+As noted in Section~\ref{sec:tabRes}, when STAtten and obSTAtten were trained on CIFAR10 for the conditions 256-dim and LIF neurons, they obtained the same best Top-1 score at the same epoch, however from Figure~\ref{fig:lif_256_acc1_test} it can be seen that the two models arrive at this converged point via the same exact steps. In this test case, the two models are actually equivalent, and obSTAtten behaves identically to STAtten. As noted before this test was repeated because this was assumed to be an error but it was replicated twice.
+
+\par One possible explanation for this behavior is that the 256-dim LIF model is significantly smaller and has less trainable parameters than any of the others. This model might simply be too simple to benefit significantly from spatial-temporal attention, and the repeat behavior being seen is merely the model bottle-necking at its maximum performance for both cases.
+
+\par Another possible explanation for this behavior is that the 256-dim LIF model simply cannot represent enough distinct features from its input for the improved temporal context provided by obSTAtten to have any effect.
+
+\subsection{LIF vs PLIF Effect on obSTAtten Performance}
+An interesting observation is that obSTAtten performs better with LIF neurons than it does with PLIF neurons. PLIF neurons have another degree of learning via their trainable parameter $\tau$, which is a time-constant and thus effects the temporal behavior of the neuron\cite{plif}. Since PLIF neurons can already encode temporal information this way, the new information provided by obSTAtten may have been redundant which could have confused the network or introduced extra noise.
+
+\par Consider how STAtten did during the two PLIF experiments, when dimension $d=256$, the non-temporal attention model performed the best in all metrics. When dimension $d$ was increased to 512, STAtten only did marginally better than the non-temporal attention model and took 8 more epochs to get there. STAtten also performs worse when trained using PLIF neurons when compared to the non-temporal attention model.
+
+\subsection{STAtten vs obSTAtten for Best-Epoch}
+It can be seen in both experiments with dimension $d=512$ that obSTAtten reaches its best epoch sooner than STAtten does. This implies that the extra temporal context provided by obSTAtten's overlapping temporal blocks allows the model to learn faster initially when the scheduled learning rate is higher\cite{STAtten}. During this early period the model is making coarser adjustments to its learned parameters, and the small amount of extra temporal context obSTAtten provides results in a stronger gradient signal. When the learning rate decreases as the model matures this effect also shrinks. This is a metric other than Top-1 in which this model has conditional improvements over STAtten, though similar to improvements in Top-1 accuracy, this only occurs when the model is sufficiently complex.
 
 \end{document}
-
-% Choose plot dimensions
-%\newcommand{\plotxscale}{\largeplotxscale}
-%\newcommand{\plotyscale}{\largeplotyscale}
-%
-%\newcommand{\plotxscale}{\smallplotxscale}
-%\newcommand{\plotyscale}{\smallplotyscale}

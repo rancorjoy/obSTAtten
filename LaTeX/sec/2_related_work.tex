@@ -5,7 +5,128 @@
 
 \section{Related Works}
 \label{sec:rel}
+While spiking neural networks have existed for some time, recent advances have significantly expanded their capabilities, particularly in the domain of visual attention. The models and mechanisms most relevant to this paper's contribution are summarized below.
 
-\noindent Contents Here
+\subsection{Spiking Neural Networks}
+As opposed to traditional neural network implementations, spiking neural networks (SNNs) incorporate artificial neuron models which behave significantly more like biological neurons, allowing the resulting networks to achieve a higher degree of energy efficiency in use as well as more accurate interpretation of biology-inspired (neuromorphic) sensors\cite{training}. Though also inspired by the brain, ANNs differ in computation mode, learning rules, and activation type to biological neurons.\cite{single} 
 
+\par These models have demonstrated real-world success in medical applications such as anomaly monitoring and brain-machine interfacing\cite{training}. These models have also shown wide usage in robotics both to enable more human-like behavior and to lower computational costs\cite{training}. In similar fashion unmanned vehicles have also seen various implementations of SNNs due to their potentially low energy usage\cite{training}. Despite the widespread utility of these models, a key challenge with implementing them in many cases is the inherent difficulty and computational expense in training them\cite{single}. 
+
+\subsection{Leaky Integrate-and-Fire Model}
+One of the simplest and most foundation neuron models in computational biology and spiking neural network research is the leaky integrate-and-fire neuron model. The model can be described by its subthreshold dynamic function, shown in \eqref{lif_sdf}\cite{plif}.
+
+\begin{equation}\label{lif_sdf}
+\tau\frac{dV(t)}{dt}=-\left(V(t)-V_{rest}\right)+X(t)
+\end{equation}
+
+In this model, $V(t)$ represents the membrane potential of the LIF neuron at time $t$, where $X(t)$ represents the corresponding input at time $t$. The constant $\tau$ is known as the membrane time constant, and represents the rate at which the current membrane potential decreases towards the resting membrane potential $V_{rest}$. When $V(t)$ exceeds a certain threshold $V_{th}$ (a hyperparameter) the neuron outputs a spike-value of 1 for time $t$ before instantaneously returning to $V(t)=V_{reset}$ where $V_{reset}<V_{th}$\cite{plif}.
+
+\par This model can be represented as an activation function like the one shown in \eqref{lif_af1} and \eqref{lif_af2}\cite{STAtten}. In this representation $u[t]^l$ is the membrane potential in the $l$-th layer at time $t$, and $W^l$ is the weight of the $l$-th layer\cite{STAtten}.
+
+\begin{equation}\label{lif_af1}
+u[t+1]^l=\tau u[t]^l + W^l f(u[t]^{l-1})
+\end{equation}
+
+\begin{equation}\label{lif_af2}
+f(u[t]^{l})=
+\begin{cases} 
+  1,\quad\text{if } u[t]^{l} > V_{th} \\
+  0,\quad\text{otherwise}
+\end{cases}
+\end{equation}
+
+\subsection{Parametric Leaky Integrate-and-Fire Model}
+
+The membrane time constant $\tau$ (often $\tau\in(0,1]$\cite{STAtten}) is typically regarded as a global hyperparameter\cite{plif} similarly to the learning rate $\alpha$ in ANNs. In parametric leaky integrate-and-fire (plif) neurons $\tau$ is a trainable parameter that each neuron fine-tunes alongside their weights. A plif SNN is defined by the following properties:\cite{plif}
+
+\begin{enumerate}
+
+\item The time constant $\tau$ is automatically set during model training
+
+\item The membrane time constant $\tau$ is shared within each layer of the model, which is biologically plausible (and is conveniently compatible with the activation function shown in \eqref{lif_af1} and \eqref{lif_af2})
+
+\item The membrane time constant $\tau$ is not shared between layers, allowing diverse phase-frequency
+responsiveness
+
+\end{enumerate}
+
+\subsection{The Vision Transformer (ViT)}
+Classically, computer vision problems are often solved using convolutional neural networks (CNNs) which have a limited kernel size and thus struggle to correlate input data that is non-contiguous. Transformers are an alternative solution to this architectural limitation, where the transformer contains an attention model which can be used to correlate non-contiguous input data. This is done for visual inputs by creating $P$ patches by splitting the image, and from them $N$ tokens. Multiple attention heads that train to correlate different projections (Query, Key and Value) are used to determine correlations between patches using the transformer's attention model.
+
+\subsection{Standard Self Attention}
+An image $x\in\mathbb{R}^{W\times H\times C}$ of width $W$, height $H$ and $C$ channels is input into the model and split into $P$ patches. This generates $N$ tokens \eqref{ST_N}, allowing each patch to be flattened into a trainable embedding vector \eqref{ST_embedding}\cite{imageClass}. From this $x_p^i\in\mathbb{R}^{(P^2C)}$ is the $i$-th patch, $E\in\mathbb{R}^{(P^2C)\times D}$ is a learnable projection matrix and the matrix $E_{pos}$ denotes positional embeddings\cite{imageClass}.
+
+\begin{equation}\label{ST_N}
+N=\frac{WH}{P^2}
+\end{equation}
+
+\begin{equation}\label{ST_embedding}
+z_0=[x_p^1\mathbf{E};x_p^2\mathbf{E};...x_p^N\mathbf{E};]+E_{pos}
+\end{equation}
+
+\par This input spike sequence can be used to generate three projections; $\mathbf{Q}$, $\mathbf{K}$ and $\mathbf{V}$ which represent the Query, Key and Value\cite{imageClass} projections of the input. For a floating-point input tensor $X_f$ with $N$ tokens and $D$ features \eqref{ST_input_tensor}, the floating point attention projections $\mathbf{Q_f}$, $\mathbf{K_f}$ and $\mathbf{V_f}$ can be found using the trained weights $\mathbf{W_Q}$, $\mathbf{W_K}$ and $\mathbf{W_V}$ \eqref{ST_self_attn} where $\mathbf{W_Q}, \mathbf{W_K}, \mathbf{W_V}\in\mathbb{R}^{D\times D}$.
+
+\begin{equation}\label{ST_input_tensor}
+X_f\in\mathbb{R}^{N\times D}
+\end{equation}
+
+\begin{equation}\label{ST_self_attn}
+Q_f=W_Q X_f,\quad K_f=W_K X_f, \quad V_f=W_V X_f
+\end{equation}
+
+\par Using the floating point projections $\mathbf{Q_f}$, $\mathbf{K_f}$ and $\mathbf{V_f}$, standard self attention can be modeled as shown in \eqref{ST_softmax}\cite{imageClass}. Notice that this attention model does not have a dimension of time and requires floating point input. Without modification this cannot be used for spiking neural networks.
+
+\begin{equation}\label{ST_softmax}
+\text{Atn}=\text{Softmax}\left(\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{D}}\right)V,\quad Q_f,K_f,V_f\in\mathbb{R}^{N\times D}
+\end{equation}
+
+\subsection{Spiking Self Attention}
+Spiking neural networks cannot directly process floating point input data such as $X_f$, thus for a binary tensor $X\in\mathbb{R^{T\times N\times D}}$ for timestep $T$, spiking self attention (SSA) can be found via \eqref{SSA} for $\mathbf{Q}, \mathbf{K}$ and $\mathbf{V}$ \eqref{SSA_QKV}. Note that $\alpha$ is a scaling factor and is not the learning rate (as it would be for an ANN).
+
+\begin{equation}\label{SSA_QKV}
+\mathbf{Q}, \mathbf{K}, \mathbf{V} = \text{LIF}(\mathbf{W_QX}), \text{LIF}(\mathbf{W_KX}), \text{LIF}(\mathbf{W_VX})
+\end{equation}
+
+\begin{equation}\label{SSA}
+\text{SSA}(\mathbf{QKV})=\text{LIF}(\mathbf{QK}^T\mathbf{V}\cdot\alpha)
+\end{equation}
+
+\subsection{Spatial-Temporal Attention (STAtten)}
+For a binary input tensor $X\in\mathbb{R^{T\times N\times D}}$ over $T$ timesteps, the spiking neural network has atleast $T$ timesteps to settle on its final output. Since a spiking neural network necessarily operates in time (unlike an ANN) it is potentially useful to expand its self attention model to include temporal attention. If the timesteps in $T$ are partitioned into non-overlapping blocks $B$, a block-wise spatial-temporal attention model (STAtten) can be formed. The model for STAtten can be seen in \eqref{STAtten_model}, where $[b]$ is defined in \eqref{STAtten_b}\cite{STAtten}.
+
+\begin{equation}\label{STAtten_model}
+\text{STAtten}(X[b])=\text{LIF}(\mathbf{Q}[b]\mathbf{K}^T[b]\mathbf{V}[b]\cdot\alpha)
+\end{equation}
+
+\begin{equation}\label{STAtten_b}
+[b]=[iB:(i+1)B,:,d],\quad i\in\{0,1,...,T/B-1\}
+\end{equation}
+
+\par The notation $[iB:(i+1)B,:,d]$ represents the aggregated features from timesteps $iB$ to $(i+1)B$\cite{STAtten}. As an example, for $T=4$ and $B=2$, this will create blocks $[0,1]$ and $[2,3]$ where the features contained within paired timesteps are compared while other features are not, making computation manageable\cite{STAtten}
+
+\subsection{Spatial Temporal Spiking Self-Attention (STSSA)}
+Alternatively to the block-wise approach taken by STAtten, pooling can be used to collapse the temporal dimension before being fed into the attention model. The three differences between SSA and STSSA are representative spiking temporal tokens, temporal window masking and spiking spatial-temporal feature fusion\cite{STSSA}.
+
+\subsubsection{Representative Spiking Temporal Tokens (RSTT)}
+For the binary input tensor $X\in\mathbb{R^{T\times N\times D}}$, the simplest processing approach would be to treat the entire object as a two-dimensional matrix where $T$ and $N$ are dimensionally combined\cite{STSSA}, however passing this into SSA would yield a complexity of $T^2N^2D$ which is computationally intractable. Since SNNs are temporally sparse (they produce discrete spikes at only some time-steps) the temporal dimension can be collapsed using max pooling (MP) as shown in \eqref{RSTT}\cite{STSSA}.
+
+\begin{equation}\label{RSTT}
+R=\text{LIF}(\text{MP}(W_QX))
+\end{equation}
+
+\par This results in $R\in\mathbb{R}^{T\times n\times D}$ where $n<<N$.\cite{STSSA} This results in $n$ representative tokens, which represent a compression of the initial temporal information.
+
+\subsubsection{Temporal Window Masking}
+If all $R$ over $T$ timesteps were directly aggregated the resulting system would suffer delays and excess computational requirements\cite{STSSA}. The chosen solution is to mask $R$ for $k$ timesteps such that $Q[t]$, $K[t]$ and $V[t]$ can only access information from the current timestep and the previous $k-1$ timesteps\cite{STSSA}.
+
+\subsubsection{Spiking Spatial-Temporal Feature Fusion}
+The $k$-order mask developed above is applied to RSTT resulting in $\mathbf{R_M}$. $\mathbf{R_M}$ is inserted between $Q$ and $K$\cite{STSSA} resulting in the model STSSA, shown in \eqref{masked_RSTT}.
+
+\begin{multline}\label{masked_RSTT}
+\text{STSSA}(\mathbf{Q}, \mathbf{R_M}, \textbf{K}, \mathbf{V})=\\ 
+\text{LIF}((\mathbf{QR}^T_M)(\mathbf{R}_M\mathbf{K}^T)V*S)
+\end{multline}
+
+\subsection{SpikingJelly}
+SpikingJelly is an open source machine learning infrastructure platform dedicated to spiking neural networks\cite{spikingjelly}. This unified framework for developing SNNs is utilized by the code-base of STAtten\cite{STAtten} and is thus utilized by the code-base of obSTAtten.
 \end{document}

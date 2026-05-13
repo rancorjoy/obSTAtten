@@ -6,12 +6,9 @@
 
 \documentclass[10pt,twocolumn,letterpaper]{article}
 
-%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
- \usepackage{cvpr}              % To produce the CAMERA-READY version
-% \usepackage[review]{cvpr}      % To produce the REVIEW version
-% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
-
+% Packages added at top to not disturb load order :)
 % Packages added by me
+ \usepackage{amsmath}
  \usepackage{subfiles}
  \usepackage{stfloats}
  \usepackage{multirow}
@@ -27,6 +24,11 @@
 \newcommand{\largeplotxscale}{0.9}
 \newcommand{\largeplotyscale}{0.4}
 \newcommand{\datapath}{../output/train/data}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+ \usepackage{cvpr}              % To produce the CAMERA-READY version
+% \usepackage[review]{cvpr}      % To produce the REVIEW version
+% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
 
 % Import additional packages in the preamble file, before hyperref
 \input{preamble}

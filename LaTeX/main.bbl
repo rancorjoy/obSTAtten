@@ -1,0 +1,83 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Eshraghian et~al.(2023)Eshraghian, Ward, Neftci, Wang, Lenz, Dwivedi,
+  Bennamoun, Jeong, and Lu]{training}
+Jason~K. Eshraghian, Max Ward, Emre~O. Neftci, Xinxin Wang, Gregor Lenz, Girish
+  Dwivedi, Mohammed Bennamoun, Doo~Seok Jeong, and Wei~D. Lu.
+\newblock Training spiking neural networks using lessons from deep learning.
+\newblock \emph{Proceedings of the IEEE}, 111\penalty0 (9):\penalty0
+  1016--1054, 2023.
+
+\bibitem[Fang et~al.(2021)Fang, Yu, Chen, Masquelier, Huang, and Tian]{plif}
+Wei Fang, Zhaofei Yu, Yanqi Chen, Timothée Masquelier, Tiejun Huang, and
+  Yonghong Tian.
+\newblock Incorporating learnable membrane time constant to enhance learning of
+  spiking neural networks.
+\newblock In \emph{2021 IEEE/CVF International Conference on Computer Vision
+  (ICCV)}, pages 2641--2651, 2021.
+
+\bibitem[Fang et~al.(2023)Fang, Chen, Ding, Yu, Masquelier, Chen, Huang, Zhou,
+  Li, and Tian]{spikingjelly}
+Wei Fang, Yanqi Chen, Jianhao Ding, Zhaofei Yu, Timothée Masquelier, Ding
+  Chen, Liwei Huang, Huihui Zhou, Guoqi Li, and Yonghong Tian.
+\newblock Spikingjelly: An open-source machine learning infrastructure platform
+  for spike-based intelligence.
+\newblock \emph{Science Advances}, 9\penalty0 (40):\penalty0 eadi1480, 2023.
+
+\bibitem[Krizhevsky(2009)]{cifar10}
+Alex Krizhevsky.
+\newblock Learning multiple layers of features from tiny images.
+\newblock Technical report, Department of Computer Science, University of
+  Toronto, 2009.
+
+\bibitem[Kumar and Konkar(2025)]{single}
+Himanshu Kumar and Aniket Konkar.
+\newblock Simple transformer with single leaky neuron for event vision.
+\newblock In \emph{2025 IEEE/CVF Winter Conference on Applications of Computer
+  Vision Workshops (WACVW)}, pages 865--871, 2025.
+
+\bibitem[Lee et~al.(2025)Lee, Li, Kim, Xiao, and Panda]{STAtten}
+Donghyun Lee, Yuhang Li, Youngeun Kim, Shiting Xiao, and Priyadarshini Panda.
+\newblock Spiking transformer with spatial-temporal attention.
+\newblock In \emph{2025 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 13948--13958, 2025.
+
+\bibitem[Li et~al.(2017)Li, Liu, Ji, Li, and Shi]{cifar10-dvs}
+Hongmin Li, Hanchao Liu, Xiangyang Ji, Guoqi Li, and Luping Shi.
+\newblock {CIFAR10-DVS}: An event-stream dataset for object classification.
+\newblock \emph{Frontiers in Neuroscience}, 11:\penalty0 309, 2017.
+
+\bibitem[Xiang et~al.(2025)Xiang, Teo, Zhang, and Ma]{imageClass}
+Yiqin Xiang, Tee~Hui Teo, Junwen Zhang, and Hanzhi Ma.
+\newblock Vision spiking transformer for image classification.
+\newblock In \emph{2025 IEEE 18th International Symposium on Embedded
+  Multicore/Many-core Systems-on-Chip (MCSoC)}, pages 327--330, 2025.
+
+\bibitem[Xiao et~al.(2025)Xiao, Wang, Zhang, Wei, Shan, Liu, Jiang, and
+  Zhang]{xnor}
+Yichen Xiao, Shuai Wang, Dehao Zhang, Wenjie Wei, Yimeng Shan, Xiaoli Liu,
+  Yulin Jiang, and Malu Zhang.
+\newblock Rethinking spiking self-attention mechanism: Implementing
+  $\alpha$-xnor similarity calculation in spiking transformers.
+\newblock In \emph{2025 IEEE/CVF Conference on Computer Vision and Pattern
+  Recognition (CVPR)}, pages 5444--5454, 2025.
+
+\bibitem[Zheng and Shen(2024)]{optimizing}
+Peixiang Zheng and Zhao Shen.
+\newblock Optimizing spiking neural networks with transformer-based spatial
+  attention.
+\newblock In \emph{2024 4th International Symposium on Computer Technology and
+  Information Science (ISCTIS)}, pages 82--85, 2024.
+
+\bibitem[Zhou et~al.(2025)Zhou, Niu, Zhang, Yuan, and Zhu]{STSSA}
+Zhaokun Zhou, Jun Niu, Yang Zhang, Li Yuan, and Yuesheng Zhu.
+\newblock Spiking transformer with spatial-temporal spiking self-attention.
+\newblock In \emph{ICASSP 2025 - 2025 IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}, pages 1--5, 2025.
+
+\end{thebibliography}

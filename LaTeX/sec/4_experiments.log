@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2025.6.26)  12 MAY 2026 18:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 12:23
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -35,80 +35,10 @@ File: size10.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 \bibindent=\dimen141
-) (../cvpr.sty
-
-LaTeX Warning: You have requested package `../cvpr',
-               but the package provides `cvpr'.
-
-Package: cvpr 2026 LaTeX class for IEEE CVPR
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.s
-ty
-Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.s
-ty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.
-sty
-Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\c
-olor.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
-dftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathc
-olor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
-Package xcolor Info: Model `RGB' extended on input line 1365.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvips
-nam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
-icx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
-l.sty
-Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
-ics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.
-sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\g
-raphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 106.
-)
-\Gin@req@height=\dimen142
-\Gin@req@width=\dimen143
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmat
 h.sty
-Package: amsmath 2025/06/16 v2.17y AMS math features
+Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
@@ -120,13 +50,13 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen
 .sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen144
+\@emptytoks=\toks17
+\ex@=\dimen142
 ))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy
 .sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen145
+\pmbraise@=\dimen143
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn
 .sty
@@ -149,7 +79,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen146
+\big@size=\dimen144
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count275
@@ -162,140 +92,24 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip17
 \c@parentequation=\count277
 \dspbrk@lvl=\count278
-\tag@help=\toks19
+\tag@help=\toks18
 \row@=\count279
 \column@=\count280
 \maxfields@=\count281
-\andhelp@=\toks20
-\eqnshift@=\dimen147
-\alignsep@=\dimen148
-\tagshift@=\dimen149
-\tagwidth@=\dimen150
-\totwidth@=\dimen151
-\lineht@=\dimen152
-\@envbody=\toks21
+\andhelp@=\toks19
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks20
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2949.
-LaTeX Info: Redefining \] on input line 2950.
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
 )
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssy
-mb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfo
-nts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookt
-abs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen153
-\lightrulewidth=\dimen154
-\cmidrulewidth=\dimen155
-\belowrulesep=\dimen156
-\belowbottomsep=\dimen157
-\aboverulesep=\dimen158
-\abovetopsep=\dimen159
-\cmidrulesep=\dimen160
-\cmidrulekern=\dimen161
-\defaultaddspace=\dimen162
-\@cmidla=\count282
-\@cmidlb=\count283
-\@aboverulesep=\dimen163
-\@belowrulesep=\dimen164
-\@thisruleclass=\count284
-\@lastruleclass=\count285
-\@thisrulewidth=\dimen165
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.
-sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip54
-\bibsep=\skip55
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count286
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/silence\silenc
-e.sty
-Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
-sages
-\sl@Save=\count287
-\sl@StateNumber=\count288
-\sl@MessageCount=\count289
-\sl@Casualties=\count290
-\sl@Filter=\toks23
-\sl@Message=\toks24
-\sl@UnexpandedMessage=\toks25
-\sl@Mess@ge=\toks26
-\sl@WarningCount=\count291
-\sl@WarningNumber=\count292
-\sl@WarningCasualties=\count293
-\sl@TempBOW=\toks27
-\sl@BankOfWarnings=\toks28
-LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count294
-\sl@ErrorNumber=\count295
-\sl@ErrorCasualties=\count296
-\sl@TempBOE=\toks29
-\sl@BankOfErrors=\toks30
-LaTeX Info: Redefining \GenericError on input line 601.
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
-box.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
-n.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
-n3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen166
-\captionmargin=\dimen167
-\caption@leftmargin=\dimen168
-\caption@rightmargin=\dimen169
-\caption@width=\dimen170
-\caption@indent=\dimen171
-\caption@parindent=\dimen172
-\caption@hangindent=\dimen173
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count298
-\c@continuedfloat=\count299
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcap
-tion.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count300
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count301
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip18
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumi
-tem.sty
-Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip56
-\enit@outerparindent=\dimen174
-\enit@toks=\toks31
-\enit@inbox=\box54
-\enit@count@id=\count302
-\enitdp@description=\count303
-))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/subfiles\subfi
 les.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
@@ -304,16 +118,16 @@ Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 ts.sty
 Package: stfloats 2017/03/27 v3.3 Improve float mechanism and baselineskip sett
 ings
-\@dblbotnum=\count304
-\c@dblbotnumber=\count305
+\@dblbotnum=\count282
+\c@dblbotnumber=\count283
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multi
 row.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip57
-\multirow@cntb=\count306
-\multirow@dima=\skip58
-\bigstrutjot=\dimen175
+\multirow@colwidth=\skip54
+\multirow@cntb=\count284
+\multirow@dima=\skip55
+\bigstrutjot=\dimen151
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendla
 yer\tikz.sty
@@ -323,13 +137,13 @@ yer\tikz.sty
 pgfrcs.sty
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfutil-common.tex
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen176
-\pgfutil@tempdimb=\dimen177
+\pgfutil@everybye=\toks22
+\pgfutil@tempdima=\dimen152
+\pgfutil@tempdimb=\dimen153
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfutil-latex.def
-\pgfutil@abb=\box55
+\pgfutil@abb=\box54
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfrcs.code.tex
@@ -341,6 +155,36 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer
 \pgfcore.sty
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+icx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
+l.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks23
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+ics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.
+sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\g
+raphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
+dftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen154
+\Gin@req@width=\dimen155
+)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlaye
 r\pgfsys.sty
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
@@ -349,33 +193,33 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks35
+\pgfkeys@tmptoks=\toks26
 ))
-\pgf@x=\dimen178
-\pgf@y=\dimen179
-\pgf@xa=\dimen180
-\pgf@ya=\dimen181
-\pgf@xb=\dimen182
-\pgf@yb=\dimen183
-\pgf@xc=\dimen184
-\pgf@yc=\dimen185
-\pgf@xd=\dimen186
-\pgf@yd=\dimen187
+\pgf@x=\dimen156
+\pgf@y=\dimen157
+\pgf@xa=\dimen158
+\pgf@ya=\dimen159
+\pgf@xb=\dimen160
+\pgf@yb=\dimen161
+\pgf@xc=\dimen162
+\pgf@yc=\dimen163
+\pgf@xd=\dimen164
+\pgf@yd=\dimen165
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count307
-\c@pgf@countb=\count308
-\c@pgf@countc=\count309
-\c@pgf@countd=\count310
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count311
+\c@pgf@counta=\count285
+\c@pgf@countb=\count286
+\c@pgf@countc=\count287
+\c@pgf@countd=\count288
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count289
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
 yer\pgf.cfg
@@ -394,13 +238,35 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
 yer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count312
-\pgfsyssoftpath@bigbuffer@items=\count313
+\pgfsyssoftpath@smallbuffer@items=\count290
+\pgfsyssoftpath@bigbuffer@items=\count291
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
 yer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.
+sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\c
+olor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathc
+olor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
@@ -411,12 +277,12 @@ math.code.tex
 mathutil.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
 mathparser.code.tex
-\pgfmath@dimen=\dimen188
-\pgfmath@count=\count314
-\pgfmath@box=\box56
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+\pgfmath@dimen=\dimen166
+\pgfmath@count=\count292
+\pgfmath@box=\box55
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
 mathfunctions.code.tex)
@@ -440,59 +306,59 @@ mathfunctions.integerarithmetics.code.tex)
 mathcalc.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
 mathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count315
+\c@pgfmathroundto@lastzeros=\count293
 ))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
 int.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen189
-\pgf@picmaxx=\dimen190
-\pgf@picminy=\dimen191
-\pgf@picmaxy=\dimen192
-\pgf@pathminx=\dimen193
-\pgf@pathmaxx=\dimen194
-\pgf@pathminy=\dimen195
-\pgf@pathmaxy=\dimen196
-\pgf@xx=\dimen197
-\pgf@xy=\dimen198
-\pgf@yx=\dimen199
-\pgf@yy=\dimen256
-\pgf@zx=\dimen257
-\pgf@zy=\dimen258
+\pgf@picminx=\dimen167
+\pgf@picmaxx=\dimen168
+\pgf@picminy=\dimen169
+\pgf@picmaxy=\dimen170
+\pgf@pathminx=\dimen171
+\pgf@pathmaxx=\dimen172
+\pgf@pathminy=\dimen173
+\pgf@pathmaxy=\dimen174
+\pgf@xx=\dimen175
+\pgf@xy=\dimen176
+\pgf@yx=\dimen177
+\pgf@yy=\dimen178
+\pgf@zx=\dimen179
+\pgf@zy=\dimen180
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen259
-\pgf@path@lasty=\dimen260
+\pgf@path@lastx=\dimen181
+\pgf@path@lasty=\dimen182
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen261
-\pgf@shorten@start@additional=\dimen262
+\pgf@shorten@end@additional=\dimen183
+\pgf@shorten@start@additional=\dimen184
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count316
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count294
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen263
+\pgflinewidth=\dimen185
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen264
-\pgf@pt@y=\dimen265
-\pgf@pt@temp=\dimen266
+\pgf@pt@x=\dimen186
+\pgf@pt@y=\dimen187
+\pgf@pt@temp=\dimen188
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorequick.code.tex
@@ -509,14 +375,14 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen267
+\pgfarrowsep=\dimen189
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen268
-\pgf@sys@shading@range@num=\count317
-\pgf@shadingcount=\count318
+\pgf@max=\dimen190
+\pgf@sys@shading@range@num=\count295
+\pgf@shadingcount=\count296
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcoreimage.code.tex
@@ -525,7 +391,7 @@ File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box60
+\pgfexternal@startupbox=\box59
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcorelayers.code.tex
@@ -546,7 +412,7 @@ File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
 pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box61
+\pgfnodeparttextbox=\box60
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
 pgfmoduleplot.code.tex
@@ -555,8 +421,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibil
 ity\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen269
-\pgf@nodesepend=\dimen270
+\pgf@nodesepstart=\dimen191
+\pgf@nodesepend=\dimen192
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibil
 ity\pgfcomp-version-1-18.sty
@@ -575,10 +441,10 @@ math.code.tex))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen271
-\pgffor@skip=\dimen272
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+\pgffor@iter=\dimen193
+\pgffor@skip=\dimen194
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
 ))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz\tikz.code.tex
@@ -587,34 +453,34 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librarie
 s\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count319
-\pgfplotmarksize=\dimen273
+\pgf@plot@mark@count=\count297
+\pgfplotmarksize=\dimen195
 )
-\tikz@lastx=\dimen274
-\tikz@lasty=\dimen275
-\tikz@lastxsaved=\dimen276
-\tikz@lastysaved=\dimen277
-\tikz@lastmovetox=\dimen278
-\tikz@lastmovetoy=\dimen279
-\tikzleveldistance=\dimen280
-\tikzsiblingdistance=\dimen281
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count320
-\tikznumberofchildren=\count321
-\tikznumberofcurrentchild=\count322
-\tikz@fig@count=\count323
+\tikz@lastx=\dimen196
+\tikz@lasty=\dimen197
+\tikz@lastxsaved=\dimen198
+\tikz@lastysaved=\dimen199
+\tikz@lastmovetox=\dimen256
+\tikz@lastmovetoy=\dimen257
+\tikzleveldistance=\dimen258
+\tikzsiblingdistance=\dimen259
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count298
+\tikznumberofchildren=\count299
+\tikznumberofcurrentchild=\count300
+\tikz@fig@count=\count301
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
 pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count324
-\pgfmatrixcurrentcolumn=\count325
-\pgf@matrix@numberofcolumns=\count326
+\pgfmatrixcurrentrow=\count302
+\pgfmatrixcurrentcolumn=\count303
+\pgf@matrix@numberofcolumns=\count304
 )
-\tikz@expandcount=\count327
+\tikz@expandcount=\count305
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibrarytopaths.code.tex
@@ -630,12 +496,12 @@ Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
 plots.code.tex
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots\pgf
 plotscore.code.tex
-\t@pgfplots@toka=\toks44
-\t@pgfplots@tokb=\toks45
-\t@pgfplots@tokc=\toks46
-\pgfplots@tmpa=\dimen282
-\c@pgfplots@coordindex=\count328
-\c@pgfplots@scanlineindex=\count329
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen260
+\c@pgfplots@coordindex=\count306
+\c@pgfplots@scanlineindex=\count307
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys
 \pgfplotssysgeneric.code.tex))
@@ -646,9 +512,9 @@ pgfcompatib\pgfplotsoldpgfsupp_loader.code.tex
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librarie
 s\pgflibraryfpu.code.tex)
 Package pgfplots: loading complementary utilities for your pgf version...
-\t@pgf@toka=\toks47
-\t@pgf@tokb=\toks48
-\t@pgf@tokc=\toks49
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/old
 pgfcompatib\pgfplotsoldpgfsupp_pgfutil-common-lists.tex))
@@ -660,14 +526,14 @@ tstructure\pgfplotsliststructure.code.tex)
 tstructure\pgfplotsliststructureext.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lis
 tstructure\pgfplotsarray.code.tex
-\c@pgfplotsarray@tmp=\count330
+\c@pgfplotsarray@tmp=\count308
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lis
 tstructure\pgfplotsmatrix.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/num
 table\pgfplotstableshared.code.tex
-\c@pgfplotstable@counta=\count331
-\t@pgfplotstable@a=\toks50
+\c@pgfplotstable@counta=\count309
+\t@pgfplotstable@a=\toks41
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lis
 tstructure\pgfplotsdeque.code.tex)
@@ -679,7 +545,7 @@ l\pgfplotsbinary.data.code.tex))
 l\pgfplotsutil.verb.code.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lib
 s\pgflibrarypgfplots.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count332
+\c@pgfplotslibrarysurf@no=\count310
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/sys
 \pgflibrarypgfplots.surfshading.pgfsys-pdftex.def)))
@@ -711,16 +577,16 @@ plots.paths.code.tex)
 layer/tikz/libraries\tikzlibrarydecorations.code.tex
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
 pgfmoduledecorations.code.tex
-\pgfdecoratedcompleteddistance=\dimen283
-\pgfdecoratedremainingdistance=\dimen284
-\pgfdecoratedinputsegmentcompleteddistance=\dimen285
-\pgfdecoratedinputsegmentremainingdistance=\dimen286
-\pgf@decorate@distancetomove=\dimen287
-\pgf@decorate@repeatstate=\count333
-\pgfdecorationsegmentamplitude=\dimen288
-\pgfdecorationsegmentlength=\dimen289
+\pgfdecoratedcompleteddistance=\dimen261
+\pgfdecoratedremainingdistance=\dimen262
+\pgfdecoratedinputsegmentcompleteddistance=\dimen263
+\pgfdecoratedinputsegmentremainingdistance=\dimen264
+\pgf@decorate@distancetomove=\dimen265
+\pgf@decorate@repeatstate=\count311
+\pgfdecorationsegmentamplitude=\dimen266
+\pgfdecorationsegmentlength=\dimen267
 )
-\tikz@lib@dec@box=\box66
+\tikz@lib@dec@box=\box65
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibrarydecorations.pathmorphing.code.tex
@@ -732,13 +598,13 @@ layer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex
 s/decorations\pgflibrarydecorations.pathreplacing.code.tex))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgfplots/lib
 s\tikzlibrarypgfplots.contourlua.code.tex)
-\pgfplots@numplots=\count334
-\pgfplots@xmin@reg=\dimen290
-\pgfplots@xmax@reg=\dimen291
-\pgfplots@ymin@reg=\dimen292
-\pgfplots@ymax@reg=\dimen293
-\pgfplots@zmin@reg=\dimen294
-\pgfplots@zmax@reg=\dimen295
+\pgfplots@numplots=\count312
+\pgfplots@xmin@reg=\dimen268
+\pgfplots@xmax@reg=\dimen269
+\pgfplots@ymin@reg=\dimen270
+\pgfplots@ymax@reg=\dimen271
+\pgfplots@zmin@reg=\dimen272
+\pgfplots@zmax@reg=\dimen273
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibraryplotmarks.code.tex
@@ -755,7 +621,141 @@ File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (../preamble.tex)
+) (../cvpr.sty
+
+LaTeX Warning: You have requested package `../cvpr',
+               but the package provides `cvpr'.
+
+Package: cvpr 2026 LaTeX class for IEEE CVPR
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\times.s
+ty
+Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/tools\xspace.s
+ty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvips
+nam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssy
+mb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfo
+nts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookt
+abs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen274
+\lightrulewidth=\dimen275
+\cmidrulewidth=\dimen276
+\belowrulesep=\dimen277
+\belowbottomsep=\dimen278
+\aboverulesep=\dimen279
+\abovetopsep=\dimen280
+\cmidrulesep=\dimen281
+\cmidrulekern=\dimen282
+\defaultaddspace=\dimen283
+\@cmidla=\count313
+\@cmidlb=\count314
+\@aboverulesep=\dimen284
+\@belowrulesep=\dimen285
+\@thisruleclass=\count315
+\@lastruleclass=\count316
+\@thisrulewidth=\dimen286
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.
+sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip56
+\bibsep=\skip57
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count317
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/silence\silenc
+e.sty
+Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
+sages
+\sl@Save=\count318
+\sl@StateNumber=\count319
+\sl@MessageCount=\count320
+\sl@Casualties=\count321
+\sl@Filter=\toks42
+\sl@Message=\toks43
+\sl@UnexpandedMessage=\toks44
+\sl@Mess@ge=\toks45
+\sl@WarningCount=\count322
+\sl@WarningNumber=\count323
+\sl@WarningCasualties=\count324
+\sl@TempBOW=\toks46
+\sl@BankOfWarnings=\toks47
+LaTeX Info: Redefining \GenericWarning on input line 433.
+\sl@ErrorCount=\count325
+\sl@ErrorNumber=\count326
+\sl@ErrorCasualties=\count327
+\sl@TempBOE=\toks48
+\sl@BankOfErrors=\toks49
+LaTeX Info: Redefining \GenericError on input line 601.
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
+box.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count328
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
+n.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
+n3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen287
+\captionmargin=\dimen288
+\caption@leftmargin=\dimen289
+\caption@rightmargin=\dimen290
+\caption@width=\dimen291
+\caption@indent=\dimen292
+\caption@parindent=\dimen293
+\caption@hangindent=\dimen294
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count329
+\c@continuedfloat=\count330
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcap
+tion.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count331
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count332
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumi
+tem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip58
+\enit@outerparindent=\dimen295
+\enit@toks=\toks50
+\enit@inbox=\box66
+\enit@count@id=\count333
+\enitdp@description=\count334
+)) (../preamble.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyper
 ref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
@@ -915,25 +915,6 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 \c@bookmark@seq@number=\count345
 \Hy@SectionHShift=\skip59
 )))
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/cleveref\cleve
-ref.sty
-Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
-Package cleveref Info: `hyperref' support loaded on input line 2370.
-LaTeX Info: Redefining \cref on input line 2370.
-LaTeX Info: Redefining \Cref on input line 2370.
-LaTeX Info: Redefining \crefrange on input line 2370.
-LaTeX Info: Redefining \Crefrange on input line 2370.
-LaTeX Info: Redefining \cpageref on input line 2370.
-LaTeX Info: Redefining \Cpageref on input line 2370.
-LaTeX Info: Redefining \cpagerefrange on input line 2370.
-LaTeX Info: Redefining \Cpagerefrange on input line 2370.
-LaTeX Info: Redefining \labelcref on input line 2370.
-LaTeX Info: Redefining \labelcpageref on input line 2370.
-Package cleveref Info: always capitalise cross-reference names on input line 78
-30.
-Package cleveref Info: always capitalise cross-reference names on input line 78
-52.
-)
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
 .
 
@@ -986,93 +967,101 @@ pp-pdf.mkii
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
 pstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.
-sty
-Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epsto
 pdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: End \AtBeginDocument code.
- ABD: EveryShipout initializing macros
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+ABD: EveryShipout initializing macros
 Package backref Info: ** backref set up for natbib ** on input line 4.
 Package hyperref Info: Link coloring ON on input line 4.
-(4_experiments.out) (4_experiments.out)
+ (4_experiments.out) (4_experiments.out)
 \@outlinefile=\write4
 \openout4 = `4_experiments.out'.
 
- (../fig/../fig/ob_fig.tex
-<../fig/../fig/CIFAR10_example.png, id=10, 24.09pt x 24.09pt>
-File: ../fig/../fig/CIFAR10_example.png Graphic file (type png)
-<use ../fig/../fig/CIFAR10_example.png>
-Package pdftex.def Info: ../fig/../fig/CIFAR10_example.png  used on input line 
-407.
-(pdftex.def)             Requested size: 64.02892pt x 64.02892pt.
-File: ../fig/../fig/CIFAR10_example.png Graphic file (type png)
-<use ../fig/../fig/CIFAR10_example.png>
-Package pdftex.def Info: ../fig/../fig/CIFAR10_example.png  used on input line 
-407.
-(pdftex.def)             Requested size: 64.02892pt x 64.02892pt.
-File: ../fig/../fig/CIFAR10_example.png Graphic file (type png)
-<use ../fig/../fig/CIFAR10_example.png>
-Package pdftex.def Info: ../fig/../fig/CIFAR10_example.png  used on input line 
-407.
-(pdftex.def)             Requested size: 64.02892pt x 64.02892pt.
-File: ../fig/../fig/CIFAR10_example.png Graphic file (type png)
-<use ../fig/../fig/CIFAR10_example.png>
-Package pdftex.def Info: ../fig/../fig/CIFAR10_example.png  used on input line 
-407.
-(pdftex.def)             Requested size: 64.02892pt x 64.02892pt.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.
+fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-Overfull \hbox (9.70311pt too wide) in paragraph at lines 407--12
- [][] 
- []
+LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.
+fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+Package natbib Warning: Citation `cifar10' on page 1 undefined on input line 14
+.
+
+
+Package natbib Warning: Citation `cifar10-dvs' on page 1 undefined on input lin
+e 17.
+
+
+Package natbib Warning: Citation `training' on page 1 undefined on input line 1
+7.
+
+
+Package natbib Warning: Citation `spikingjelly' on page 1 undefined on input li
+ne 21.
+
+
+Package natbib Warning: Citation `STAtten' on page 1 undefined on input line 26
+.
+
+
+Package natbib Warning: Citation `spikingjelly' on page 1 undefined on input li
+ne 26.
 
 
 
 
-
-[1{C:/Users/Brandon Esebag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:
-/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc
-}
+Package natbib Warning: There were undefined citations.
 
 
- <../fig/../fig/CIFAR10_example.png>] (4_experiments.aux)
+
+[1
+
+{C:/Users/Brandon Esebag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/U
+sers/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+ (4_experiments.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `4_experiments.out' has not changed.
-(rerunfilecheck)             Checksum: 7E416E4959CE62169622FC8153EDD37E;98.
+(rerunfilecheck)             Checksum: 5AD195E8EA9BA3B7360E7F5459E7BDD0;734.
  ) 
 Here is how much of TeX's memory you used:
- 35361 strings out of 473497
- 825796 string characters out of 5708694
- 1375340 words of memory out of 5000000
- 58070 multiletter control sequences out of 15000+600000
- 567611 words of font info for 48 fonts, out of 8000000 for 9000
+ 33169 strings out of 473497
+ 776596 string characters out of 5708694
+ 1242482 words of memory out of 5000000
+ 55877 multiletter control sequences out of 15000+600000
+ 568832 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 110i,10n,111p,787b,1046s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw
--base35/utmb8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/urw-base35/utmr8a.pfb>
-Output written on 4_experiments.pdf (1 page, 42812 bytes).
+ 122i,5n,124p,787b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Brandon Esebag/AppData/Local/Pro
+grams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Brandon Esebag
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/utmb8a.pfb><C:/Use
+rs/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/u
+tmr8a.pfb>
+Output written on 4_experiments.pdf (1 page, 66378 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
- 4 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 68 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

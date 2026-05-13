@@ -5,7 +5,33 @@
 
 \section{Introduction}
 \label{sec:intro}
+Artificial neural networks and by extension much of the field of deep-learning have been inspired by the human brain's ability to learn through exposure to information\cite{training}. Learned models are capable of astounding feats once thought only possible by a human being, from outperforming humans in strategic games to outperforming clinical specialist in diagnostic tasks\cite{training}. Despite this direct inspiration, classical artificial neural networks (ANNs) do not work the same way as the human brain, as they rely on held floating point values to model their neural activation, and they use non-biological learning rules\cite{single}. This gap between biological neurons and artificial neurons due to structural and behavioral differences has been partially closed due to research into spiking neural networks\cite{single}.
 
-\noindent Contents Here
+\subsection{Energy Usage Considerations}
+Spiking neural networks (SNNs) communicate via discrete, finite duration spikes\cite{STAtten}\cite{xnor} making them particularly suited at event based processing while allowing them to consume less energy if given specialized hardware (see Section~\ref{sec:neurHard}) \cite{optimizing} as well as allowing them to avoid performing repeated MAC operations\cite{xnor}.
+
+\subsection{Neuromorphic Computing}
+Neuromorphic computing is broadly an attempt to replicate the computational behavior and outcomes of the human brain, with an aim to reduce the energy cost of deploying learning models\cite{training}\cite{imageClass}. These techniques are not without their flaws, SNNs typically suffer from limited representational capacity and lower classification accuracy when compared to conventional models\cite{imageClass}. Neuromorphic computing relies on specialized hardware and sensors as well as specialized algorithms, both of which are explored below.
+
+\subsubsection{Neuromorphic Hardware}
+\label{sec:neurHard}
+Neuromorphic hardware is designed for the use case of deploying SNNs, and takes advantage of said SNN's high informational sparsity to reduce data movement on-and-off of the neuromorphic chip\cite{training}. Using neuromorphic hardware SNNs often achieve significant reductions in energy usage when compared to the performance a similar task on typical hardware\cite{training}.
+
+\subsubsection{Neuromorphic Sensors}
+Neuromorphic sensors, like neuromorphic hardware, are inspired by the mode-of-operation of biological systems. These sensors produce output spikes when their inputs change as opposed to providing a continuous stream of information\cite{training}. 
+
+\subsubsection{Neuromorphic Algorithms}
+Algorithms that learn to make sense of information encoded as spikes are called SNNs\cite{training}. SNNs work with single bit binary activations over time instead of floating point activations like traditional ANNs use, allowing high spatial and temporal sparsity (each neuron is usually not activated as activation is boolean)\cite{training}.
+
+\subsection{Our Contribution}
+This paper contributes a modified version of the STAtten spatial-temporal attention model\cite{STAtten} for spiking transformers which attempts to increase the model's ability for temporal correlation by allowing overlapping temporal blocks. This model is referred to as overlapping-block STAtten (obSTAtten), and was experimentally compared with both STAtten and a `default attention model' for static input over $T=4$. In summary, our contributions are:
+\begin{itemize}
+
+\item This paper proposes obSTAtten, a modified spatial-temporal attention model for spiking transformers that supports overlapping temporal blocks.
+
+\item This paper evaluates obSTAtten against STAtten and a `default attention model' over $T=4$ static inputs.
+\end{itemize}
+
+\noindent For implementation details see Section~\ref{sec:prop} and for the outcome of our experiments see Section~\ref{sec:res}.
 
 \end{document}

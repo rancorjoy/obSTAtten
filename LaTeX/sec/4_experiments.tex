@@ -5,14 +5,24 @@
 
 \section{Experiments}
 \label{sec:exp}
+The experiments performed in this paper focused on using CIFAR10 (static images) as input to train various permutations of STAtten and obSTAtten such that their accuracy scores can be evaluated. The dataset used (CIFAR10) and a considered dataset (CIFAR10-DVS) are expanded on below. 
 
-\begin{figure*}[t]
-  \centering
-  \subfile{../fig/ob_fig}
-  \caption{obSTAtten Attention Model}
-  \label{fig:ob_fig}
-\end{figure*}
+\subsection{Datasets}
+There are two datasets which were explored when running experiments for this paper, being CIFAR10 and CIFAR10-DVS. Details about each dataset and the key differences between them are expanded on below. 
 
-\noindent Contents Here
+\subsubsection{CIFAR10}
+CIFAR10 is a dataset that contains 60,000 32$\times$32 color images in ten classes (6,000 images per class). The test batch contains 1000 randomly selected images from each class. The training batches contain a non-uniform distribution of the remaining 5,000 images per class. The ten classes are airplane, automobile, bird, cat, deer, dog, frog, horse, ship and truck\cite{cifar10}. This is the single dataset used in experimentation for this paper.
+
+\subsubsection{CIFAR10-DVS}
+CIFAR10-DVS is a dataset much like CIFAR10, however the dataset contains DVS (dynamic vision sensor, a type of neuromorphic sensor) recorded samples of CIFAR10 in 128$\times$128 resolution over many timesteps. This allows the input of the target SSN to change each timestep during training\cite{cifar10-dvs}. This should provide more realistic training for use with neuromorphic hardware and sensors (eg in robotics)\cite{training}. Though this would have made an excellent benchmark for obSTAtten, a study of CIFAR10-DVS could not be run due to hardware limitations (see Section~\ref{sec:hwl}).
+
+\subsection{Hardware Limitations}
+\label{sec:hwl}
+The experiments run to collect data for obSTAtten were limited by severe hardware limitations. The source code for STAtten and SpikingJelly requires a CUDA\cite{spikingjelly} capable GPU for training. The only machine at the disposal of this project was a moderately old desktop gaming PC that contains an Nvidia GTX 1070TI which limited training to a batch-size of 4 and prevented any training parallelism from being implemented. This likely significantly slowed down training as well reducing the number of experiments that could be run during the research time.
+
+\par Another limitation is storage space, the machine that was used to train obSTAtten has very limited (and slow) storage space, preventing CIFAR10-DVS from being trained on. This limited the experiment to using CIFAR10, which did not allow for a comparison between static and DVS input for obSTAtten.
+
+\subsection{Training Conditions}
+For four conditions, both STAtten, obSTAtten, and a non-temporal standard spiking transformer model (SDT) were trained allowing their performance to be compared. These conditions had the model dimension $d$ tested for $d=256$ and $d=512$, as well as training using LIF neurons vs PLIF neurons. These four conditions were trained for all three attention models, resulting in 12 complete training runs. Each run trained for 210 epochs, as this is the default configuration when training STAtten on CIFAR10 meaning the training conditions for both models were the same. The model architecture used was the provided Spiking Transformer mode based on SpikingJelly\cite{STAtten}\cite{spikingjelly}.
 
 \end{document}

@@ -1,0 +1,104 @@
+\documentclass[../main.tex]{subfiles}
+\graphicspath{{\subfix{}}}
+
+% Resolves datapath when this file is being rendered alone
+\ifdefined\subfilesmaindocument\else
+  \renewcommand{\datapath}{../../output/train/data}
+  
+  	% Preview plot dimensions
+  	\def\plotlarge{}  % comment out for small
+	\ifdefined\plotlarge
+  		\newcommand{\plotxscale}{1.8}
+  		\newcommand{\plotyscale}{0.875}
+	\else
+  		\newcommand{\plotxscale}{0.9}
+  		\newcommand{\plotyscale}{0.5}
+	\fi
+\fi
+
+\begin{document}
+
+\begin{tikzpicture}
+  \begin{axis}
+  [			% Plot Settings
+    width=\plotxscale\linewidth,
+  	height=\plotyscale\linewidth,
+    xlabel={Epoch},
+    ylabel={Accuracy (\%)},
+    xmin=100, xmax=325,
+    xticklabels={100,120,140,160,180,200,220},
+    ymin=1, ymax=1.35,
+    grid=minor,
+    legend pos=south east,
+  ]				% Trace Settings
+	\addplot[
+  		%mark = *,
+  		thin,
+  		blue,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/obSTAtten_512_lif_cifar10_train.csv};\addlegendentry{obSTAtten (512, LIF))};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		green!50!black,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/STAtten_512_lif_cifar10_train.csv};\addlegendentry{STAtten (512, LIF)};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		orange,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/SDT_512_lif_cifar10_train.csv};\addlegendentry{SDT (512, LIF)};	
+	\addplot[
+  		%mark = *,
+  		thin,
+  		blue,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/obSTAtten_512_plif_cifar10_train.csv};\addlegendentry{obSTAtten (512, PLIF)};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		green!50!black,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/STAtten_512_plif_cifar10_train.csv};\addlegendentry{STAtten (512, PLIF)};
+	\addplot[
+  		%mark = *,
+  		thin,
+  		orange,
+		]		% Trace Source 
+		table[
+  		col sep=comma,
+  		header=has colnames,
+  		x expr=\thisrow{epoch},
+  		y={train_loss}
+		] {\datapath/SDT_512_plif_cifar10_train.csv};\addlegendentry{SDT (512, PLIF)};
+		
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

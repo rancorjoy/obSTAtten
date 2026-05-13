@@ -6,6 +6,52 @@
 \section{Proposed Approach}
 \label{sec:prop}
 
-\noindent Contents Here
+\begin{figure*}[t]
+  \centering
+  \subfile{../fig/ob_fig}
+  \caption{obSTAtten Attention Model showing determined block count and temporal output averaging}
+  \label{fig:ob_fig}
+\end{figure*}
+
+This section will outline the modifications made to the STAtten attention model\cite{STAtten} and provide explanation for the workings of the obSTAtten attention model. The core concepts covered are how obSTAtten determines the number of temporal blocks to use, how overlapping temporal blocks are constructed and the averaging of the resulting temporal outputs. As discussed in Section~\ref{sec:attn} both STAtten and obSTAtten use the came method for computing attention from said temporal outputs.
+
+\subsection{Determining Block Count}
+In unmodified STAtten the number of temporal blocks $N_B$ can be easily determined by the number of timesteps $T$ and the block size $S_B$ as shown in \eqref{STAtten_dbc}, where $//$ denotes the floor division operator. For $T=4$ and $S_B=2$, there should be $N_B=2$ temporal blocks. This is because in STAtten blocks are non-overlapping temporal partitions, so each timestep $t$ can only appear in one block.
+
+\begin{equation}\label{STAtten_dbc}
+N_B=T//S_B
+\end{equation}
+
+\par In obSTAtten the number of temporal blocks $N_B$ is slightly more complex to calculate. This complexity results from the allowance of overlapping temporal blocks which no longer create non-overlapping temporal partitions. For simplicity the model has been configured for an overlap of $T_{ov}=1$ and a stride $s=1$, resulting in the relationship shown in \eqref{obSTAtten_dbc}. As before, $N_B$ is the number of blocks, $T$ is the number of time-samples $t$ and $S_B$ is the block size.
+
+\begin{equation}\label{obSTAtten_dbc}
+N_B=T-S_B+1
+\end{equation}
+
+\par For an example of $T=4$ and $S_B=2$, there should be $N_B=3$ blocks, as shown in Figure~\ref{fig:ob_fig}. In Figure~\ref{fig:ob_fig}, the generated $\mathbf{Q}$, $\mathbf{K}$ and $\mathbf{V}$ projections at each duplicate timestep are shared between both blocks.
+
+\subsection{Overlapping Block Construction}
+For $T$ time samples and $N_B$ blocks, overlapping block $\mathcal{B}_i$ is formed by \eqref{obSTAtten_obc} for index $i$. Note that if the index $i$ had a stride $s=S_B$ this would output the same set of blocks as STAtten.
+
+\begin{equation}\label{obSTAtten_obc}
+\mathcal{B}_i=[i:i=N_B,:,d],\quad i\in{0,1,...,T-S_B}
+\end{equation}
+
+\subsection{Attention Computation}
+\label{sec:attn}
+After the generation of $N_B$ overlapping blocks $\mathcal{B}_i$, obSTAtten computes its attention identically to how STAtten does. Since the output dimensions of the overlapping block construction outlined above are the same as the non-overlapping blocks produced by STAtten ($S_B\times N\times D$), the rest of the model was left unchanged. As a result the obSTAtten attention model can be seen in \eqref{obSTAtten_model}.
+
+\begin{equation}\label{obSTAtten_model}
+\text{obSTAtten}(X_{\mathcal{B}_i})=\text{LIF}(\mathbf{Q}_{\mathcal{B}_i}\mathbf{K}^T_{\mathcal{B}_i}\mathbf{V}_{\mathcal{B}_i}\cdot\alpha)
+\end{equation}
+
+\subsection{Temporal Output Averaging}
+Let the final model output at timestep $t$ be $\hat{Y}_t$ where ${i:t\in \mathcal{B}_i}$ is the set of overlapping blocks containing timestep $t$. Since multiple blocks are contributing to $\hat{Y}_t$ their contributions must be averaged. This is done via \eqref{obSTAtten_avg}.
+
+\begin{equation}\label{obSTAtten_avg}
+\hat{Y}_t=\frac{1}{|{i:t\in \mathcal{B}_i}|}\sum_{i:t\in \mathcal{B}_i}\text{obSTAtten}(X_{\mathcal{B}_i})_t
+\end{equation}
+
+\noindent Note that timesteps $t=0$ and $t=T-1$ are not averaged because they each only appear in one block. This behavior is shown in Figure~\ref{fig:ob_fig}.
 
 \end{document}
