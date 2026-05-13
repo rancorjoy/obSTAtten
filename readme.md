@@ -55,6 +55,7 @@ When a model is trained, it will output into its own folder inside of output/tra
 
 ## Ackonwledgements
 This project is based on this GitHub Repository: https://github.com/Intelligent-Computing-Lab-Panda/STAtten
+
 The linked repository was modified in the following ways for this project:
 - Added an attention model called obSTAtten to ms_conv.py and ensured the code was reachable
 - Modified obSTAtten to have the following characteristics
