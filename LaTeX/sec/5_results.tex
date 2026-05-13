@@ -1,6 +1,11 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{}}}
 
+% Resolves datapath when this file is being rendered alone
+\ifdefined\subfilesmaindocument\else
+  \renewcommand{\datapath}{../../output/train/data}
+\fi
+
 \begin{document}
 
 \section{Results}
@@ -8,4 +13,48 @@
 
 \noindent Contents Here
 
+\begin{table}[h]\centering
+\caption{Dim-256 LIF Results}
+\vspace{-0.75\baselineskip}
+\small
+\subfile{../fig/lif_256_tab}
+\end{table}
+
+\begin{table}[h]\centering
+\caption{Dim-512 LIF Results}
+\vspace{-0.75\baselineskip}
+\small
+\subfile{../fig/lif_512_tab}
+\end{table}
+
+\begin{table}[h]\centering
+\caption{Dim-256 PLIF Results}
+\vspace{-0.75\baselineskip}
+\small
+\subfile{../fig/plif_256_tab}
+\end{table}
+
+\begin{table}[h]\centering
+\caption{Dim-512 PLIF Results}
+\vspace{-0.75\baselineskip}
+\small
+\subfile{../fig/plif_512_tab}
+\end{table}
+
+%\newcommand{\plotxscale}{\largeplotxscale}
+%\newcommand{\plotyscale}{\largeplotyscale}
+%\begin{figure*}[t]
+%  \centering
+%  \subfile{../fig/lif_256_acc1_test}
+%  \caption{LIF Model Test accuracy on CIFAR-10}
+%  \label{fig:lif_256_acc1_test}
+%\end{figure*}
+
 \end{document}
+
+% Choose plot dimensions
+%\newcommand{\plotxscale}{\largeplotxscale}
+%\newcommand{\plotyscale}{\largeplotyscale}
+%
+%\newcommand{\plotxscale}{\smallplotxscale}
+%\newcommand{\plotyscale}{\smallplotyscale}
