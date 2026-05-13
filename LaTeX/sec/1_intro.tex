@@ -23,7 +23,7 @@ Neuromorphic sensors, like neuromorphic hardware, are inspired by the mode-of-op
 \subsubsection{Neuromorphic Algorithms}
 Algorithms that learn to make sense of information encoded as spikes are called SNNs\cite{training}. SNNs work with single bit binary activations over time instead of floating point activations like traditional ANNs use, allowing high spatial and temporal sparsity (each neuron is usually not activated as activation is boolean)\cite{training}.
 
-\subsection{Our Contribution}
+\subsection{This Paper's Contribution}
 This paper contributes a modified version of the STAtten spatial-temporal attention model\cite{STAtten} for spiking transformers which attempts to increase the model's ability for temporal correlation by allowing overlapping temporal blocks. This model is referred to as overlapping-block STAtten (obSTAtten), and was experimentally compared with both STAtten and a `default attention model' for static input over $T=4$. In summary, our contributions are:
 \begin{itemize}
 

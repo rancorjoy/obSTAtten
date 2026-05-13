@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 14:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 14:17
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1099,14 +1099,20 @@ L3 programming layer <2024-12-25>
 
 LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: File `1_intro.out' has not changed.
-(rerunfilecheck)             Checksum: B76928E05AF0EC466C3ED356A1FB4CE2;1141.
+
+Package rerunfilecheck Warning: File `1_intro.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `1_intro.out':
+(rerunfilecheck)             Before: B76928E05AF0EC466C3ED356A1FB4CE2;1141
+(rerunfilecheck)             After:  6454C7EDAA4397462F22CF5530F0D97B;1189.
  ) 
 Here is how much of TeX's memory you used:
- 33202 strings out of 473497
- 777061 string characters out of 5708694
+ 33203 strings out of 473497
+ 777089 string characters out of 5708694
  1244479 words of memory out of 5000000
- 55905 multiletter control sequences out of 15000+600000
+ 55906 multiletter control sequences out of 15000+600000
  569146 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  122i,5n,124p,882b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1115,7 +1121,7 @@ fonts/cm/cmmi10.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Brandon Esebag/AppData/Local/Pro
 grams/MiKTeX/fonts/type1/public/urw-base35/utmb8a.pfb><C:/Users/Brandon Esebag/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/utmr8a.pfb>
-Output written on 1_intro.pdf (1 page, 55604 bytes).
+Output written on 1_intro.pdf (1 page, 55917 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)

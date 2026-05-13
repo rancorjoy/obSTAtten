@@ -212,7 +212,7 @@ class MS_SSA_Conv(nn.Module):
             )
 
 
-        ## obSTAtten Attention Mode (newly added) -- "overlappint block STAtten"
+        ## obSTAtten Attention Mode (newly added) -- "overlapping block STAtten"
         if self.attention_mode == "obSTAtten":
             if self.dvs:
                 scaling_factor = 1 / (H * H * self.chunk_size)
@@ -223,7 +223,7 @@ class MS_SSA_Conv(nn.Module):
             num_chunks = T - self.chunk_size + 1
 
             # Replace .view() with .unfold() as .view() only works for contiguous/non-overlapping memory
-            # .unfold() needs dimension, size and step to slide its window over a dimension
+            # .unfold() needs dimension, size and step to slide a window over a dimension
             q_chunks = q.unfold(0, self.chunk_size, 1)
             k_chunks = k.unfold(0, self.chunk_size, 1)
             v_chunks = v.unfold(0, self.chunk_size, 1)
