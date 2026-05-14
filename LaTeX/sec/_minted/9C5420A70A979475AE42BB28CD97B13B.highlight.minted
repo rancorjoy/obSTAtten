@@ -1,0 +1,27 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Unlike in STAtten where each time ...}
+\PYG{c+c1}{\PYGZsh{} The output from each time\PYGZhy{}step  ...}
+\PYG{n}{output\PYGZus{}acc} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{zeros}
+	\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{num\PYGZus{}heads}\PYG{p}{,}
+	\PYG{n}{N}\PYG{p}{,} \PYG{n}{head\PYGZus{}dim}\PYG{p}{,} \PYG{n}{device}\PYG{o}{=}\PYG{n}{x}\PYG{o}{.}\PYG{n}{device}\PYG{p}{,}
+	\PYG{n}{dtype}\PYG{o}{=}\PYG{n}{out}\PYG{o}{.}\PYG{n}{dtype}\PYG{p}{)}
+	
+\PYG{n}{count} \PYG{o}{=} \PYG{n}{torch}\PYG{o}{.}\PYG{n}{zeros}\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{device}\PYG{o}{=}\PYG{n}{x}\PYG{o}{.}\PYG{n}{device}\PYG{p}{,}
+	\PYG{n}{dtype}\PYG{o}{=}\PYG{n}{out}\PYG{o}{.}\PYG{n}{dtype}\PYG{p}{)}
+
+\PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}chunks}\PYG{p}{)}\PYG{p}{:}
+	\PYG{c+c1}{\PYGZsh{} chunk i covers timesteps ...}
+	\PYG{n}{output\PYGZus{}acc}
+		\PYG{p}{[}\PYG{n}{i}\PYG{p}{:}\PYG{n}{i}\PYG{o}{+}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{]}
+		\PYG{o}{+}\PYG{o}{=} \PYG{n}{out}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{o}{.}\PYG{n}{permute}
+		\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+		
+	\PYG{n}{count}\PYG{p}{[}\PYG{n}{i} \PYG{p}{:} \PYG{n}{i} \PYG{o}{+} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{]}
+		\PYG{o}{+}\PYG{o}{=} \PYG{l+m+mi}{1}
+
+	\PYG{c+c1}{\PYGZsh{} Divide each timestep by ...}
+	\PYG{c+c1}{\PYGZsh{} count shape: (T,) \PYGZhy{}\PYGZgt{} ...}
+	\PYG{n}{output} \PYG{o}{=} \PYG{n}{output\PYGZus{}acc} \PYG{o}{/}
+		\PYG{n}{count}\PYG{o}{.}\PYG{n}{reshape}
+		\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\end{MintedVerbatim}

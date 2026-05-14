@@ -1,0 +1,25 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Replace .view() with .unfold() ...}
+\PYG{c+c1}{\PYGZsh{} .unfold() needs dimension, size ...}
+\PYG{n}{q\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{q}\PYG{o}{.}\PYG{n}{unfold}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{k\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{k}\PYG{o}{.}\PYG{n}{unfold}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{n}{v\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{v}\PYG{o}{.}\PYG{n}{unfold}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+	
+\PYG{c+c1}{\PYGZsh{} shape: (num\PYGZus{}chunks, B, num\PYGZus{}heads, ...}
+
+\PYG{c+c1}{\PYGZsh{} STAtten permutes (num\PYGZus{}chunks, ...}
+\PYG{c+c1}{\PYGZsh{} .unfold() puts chunk\PYGZus{}size at ...}
+\PYG{n}{q\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{q\PYGZus{}chunks}\PYG{o}{.}\PYG{n}{permute}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+	
+\PYG{n}{k\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{k\PYGZus{}chunks}\PYG{o}{.}\PYG{n}{permute}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+	
+\PYG{n}{v\PYGZus{}chunks} \PYG{o}{=} \PYG{n}{v\PYGZus{}chunks}\PYG{o}{.}\PYG{n}{permute}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\end{MintedVerbatim}

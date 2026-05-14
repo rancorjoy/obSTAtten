@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 18:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**./lif_256_train_time.tex
-(lif_256_train_time.tex
+**./7_suppl.tex
+(7_suppl.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
 
@@ -1027,8 +1027,8 @@ File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
 sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-9.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
+.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.
 fd
@@ -1039,27 +1039,27 @@ ckend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count374
 \l__pdf_internal_box=\box75
-) (lif_256_train_time.aux)
-\openout1 = `lif_256_train_time.aux'.
+) (7_suppl.aux)
+\openout1 = `7_suppl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
 pp-pdf.mkii
@@ -1093,13 +1093,65 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-Package backref Info: ** backref set up for natbib ** on input line 19.
-Package hyperref Info: Link coloring ON on input line 19.
- (lif_256_train_time.out)
-(lif_256_train_time.out)
+Package backref Info: ** backref set up for natbib ** on input line 8.
+Package hyperref Info: Link coloring ON on input line 8.
+ (7_suppl.out) (7_suppl.out)
 \@outlinefile=\write5
-\openout5 = `lif_256_train_time.out'.
+\openout5 = `7_suppl.out'.
 
+\pydata@fh@_9F7302FBB48ED3949192213D6CC8D513.data.minted=\write6
+\openout6 = `_9F7302FBB48ED3949192213D6CC8D513.data.minted'.
+
+runsystem(latexminted config  --timestamp 20260513180609 9F7302FBB48ED394919221
+3D6CC8D513)...executed.
+
+
+(_9F7302FBB48ED3949192213D6CC8D513.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20260513180609 9F7302FBB48ED3949
+192213D6CC8D513)...executed.
+
+ (_minted/default.style.minted) (_minted/83C4F9C3D088783809DE93E5320CD4B9.highl
+ight.minted
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.
+fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 4
+.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.
+fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)) (_minted/7F81C4969268D894AF49105464DD5AFF.highlight.minted)
+(_minted/3F35F683616B2EB77B07F1A0ABC685B4.highlight.minted)
+(_minted/7FA67E303E21C02DE0A6805995D86417.highlight.minted
+
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 2.
+) (_minted/9E713F9A1072BC2E6B353EA74C847F13.highlight.minted)
+(_minted/992684AF2585A2E61BBA0D7DF5E519FA.highlight.minted)
+(_minted/7C20B14B5729B6D28DFF7E01DD1E3993.highlight.minted)
+(_minted/56180412A9EC27C34A0EC748E1179FEE.highlight.minted
+
+[1{C:/Users/Brandon Esebag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:
+/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc
+}
+
+
+
+]) (_minted/3AF8DD384052819CEA6A0ECAB9C43E82.highlight.minted)
+\openout6 = `_9F7302FBB48ED3949192213D6CC8D513.data.minted'.
+
+runsystem(latexminted highlight  --timestamp 20260513180609 9F7302FBB48ED394919
+2213D6CC8D513)...executed.
+
+
+(_minted/9C5420A70A979475AE42BB28CD97B13B.highlight.minted
+
+) (unchosen_plots.tex (../fig/../fig/lif_256_train_time.tex
 PGFPlots: reading {../../output/train/data/obSTAtten_256_lif_cifar10_timing.csv
 }
 
@@ -1121,42 +1173,87 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.
 fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (194.62527pt too wide) in paragraph at lines 68--69
-[][] 
- []
+)) (../fig/../fig/plif_256_train_time.tex
+PGFPlots: reading {../../output/train/data/obSTAtten_256_plif_cifar10_timing.cs
+v}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/STAtten_256_plif_cifar10_timing.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/SDT_256_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+) (../fig/../fig/plif_512_train_time.tex
+PGFPlots: reading {../../output/train/data/obSTAtten_512_plif_cifar10_timing.cs
+v}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/STAtten_512_plif_cifar10_timing.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/SDT_512_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+) (../fig/../fig/plif_256_acc1_test.tex
+PGFPlots: reading {../../output/train/data/obSTAtten_256_plif_cifar10_test.csv}
 
 
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/STAtten_256_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/SDT_256_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+) (../fig/../fig/lif_512_acc1_test.tex
+PGFPlots: reading {../../output/train/data/obSTAtten_512_lif_cifar10_test.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/STAtten_512_lif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/SDT_512_lif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+) (../fig/../fig/plif_512_acc1_test.tex
+PGFPlots: reading {../../output/train/data/obSTAtten_512_plif_cifar10_test.csv}
 
 
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/STAtten_512_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../../output/train/data/SDT_512_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+))
 
-[1
+[2] [3] [4]
+\openout6 = `_9F7302FBB48ED3949192213D6CC8D513.data.minted'.
 
-{C:/Users/Brandon Esebag/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/U
-sers/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
+runsystem(latexminted clean  --timestamp 20260513180609 9F7302FBB48ED3949192213
+D6CC8D513)...executed.
 
-] (lif_256_train_time.aux)
+ (7_suppl.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
-Package rerunfilecheck Info: File `lif_256_train_time.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `7_suppl.out' has not changed.
+(rerunfilecheck)             Checksum: D0DED32AE275ABE9CA41C7E8715D4DE1;966.
  ) 
 Here is how much of TeX's memory you used:
- 37321 strings out of 473497
- 897216 string characters out of 5708694
- 1518960 words of memory out of 5000000
- 59986 multiletter control sequences out of 15000+600000
- 563966 words of font info for 49 fonts, out of 8000000 for 9000
+ 37924 strings out of 473497
+ 913592 string characters out of 5708694
+ 1690329 words of memory out of 5000000
+ 60461 multiletter control sequences out of 15000+600000
+ 575568 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 122i,17n,124p,792b,2056s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 122i,19n,124p,781b,2250s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/urw-base35/utmr8a.pfb>
-Output written on lif_256_train_time.pdf (1 page, 28223 bytes).
+/type1/public/urw-base35/ucrb8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/public/urw-base35/ucrr8a.pfb><C:/Users/Brandon Esebag/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/ucrro8a.pfb><C:/User
+s/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/ut
+mb8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/urw-base35/utmr8a.pfb>
+Output written on 7_suppl.pdf (4 pages, 126026 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 2 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 

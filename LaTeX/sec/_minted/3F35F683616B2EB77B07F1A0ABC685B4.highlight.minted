@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k}{assert} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{attention\PYGZus{}mode} \PYG{o+ow}{not} \PYG{o+ow}{in}
+	\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{STAtten, obSTAtten, SDT}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{]}
+\end{MintedVerbatim}

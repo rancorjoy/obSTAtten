@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2026.5.12)  13 MAY 2026 18:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -616,6 +616,147 @@ File: tikzlibrary3d.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/minted\minted.
+sty
+Package: minted 2024/11/17 v3.4.0 Yet another Pygments shim for LaTeX
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/catchfile\ca
+tchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\in
+fwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxc
+mds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\ete
+xcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.
+sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)))
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
+box.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count313
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/fvextra\fvextr
+a.sty
+Package: fvextra 2024/11/17 v1.10.0 fvextra - extensions and patches for fancyv
+rb
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancy
+vrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count314
+\FV@InFile=\read3
+\FV@TabBox=\box66
+\c@FancyVerbLine=\count315
+\FV@StepNumber=\count316
+\FV@OutFile=\write4
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/upquote\upquot
+e.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.
+sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvop
+tions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvse
+tkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+\linenopenalty=\count317
+\output=\toks42
+\linenoprevgraf=\count318
+\linenumbersep=\dimen274
+\linenumberwidth=\dimen275
+\c@linenumber=\count319
+\c@pagewiselinenumber=\count320
+\c@LN@truepage=\count321
+\c@internallinenumber=\count322
+\c@internallinenumbers=\count323
+\quotelinenumbersep=\dimen276
+\bframerule=\dimen277
+\bframesep=\dimen278
+\bframebox=\box67
+\linenoamsmath@ams@eqpen=\count324
+LaTeX Info: Redefining \\ on input line 3180.
+)
+\c@FancyVerbWriteLine=\count325
+\c@FancyVerbBufferLine=\count326
+\c@FV@TrueTabGroupLevel=\count327
+\c@FV@TrueTabCounter=\count328
+\FV@TabBox@Group=\box68
+\FV@TmpLength=\skip56
+\c@FV@HighlightLinesStart=\count329
+\c@FV@HighlightLinesStop=\count330
+\FV@LoopCount=\count331
+\FV@NCharsBox=\box69
+\FV@BreakIndent=\dimen279
+\FV@BreakIndentNChars=\count332
+\FV@BreakSymbolSepLeft=\dimen280
+\FV@BreakSymbolSepLeftNChars=\count333
+\FV@BreakSymbolSepRight=\dimen281
+\FV@BreakSymbolSepRightNChars=\count334
+\FV@BreakSymbolIndentLeft=\dimen282
+\FV@BreakSymbolIndentLeftNChars=\count335
+\FV@BreakSymbolIndentRight=\dimen283
+\FV@BreakSymbolIndentRightNChars=\count336
+\c@FancyVerbLineBreakLast=\count337
+\FV@LineBox=\box70
+\FV@LineIndentBox=\box71
+\c@FV@BreakBufferDepth=\count338
+\FV@LineWidth=\dimen284
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/latex2pydata\l
+atex2pydata.sty
+Package: latex2pydata 2024/11/17 v0.4.0 latex2pydata - write data to file in Py
+thon literal format
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\p
+dftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/pgfopts\pgfopt
+s.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks43
+\pgfopts@list@add@b@toks=\toks44
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/tools\shellesc
+.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/float\float.st
+y
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count339
+\float@exts=\toks45
+\float@box=\box72
+\@float@everytoks=\toks46
+\@floatcapt=\box73
+)
+\c@minted@FancyVerbLineTemp=\count340
+\@float@every@listing=\toks47
+\c@listing=\count341
 ) (cvpr.sty
 Package: cvpr 2026 LaTeX class for IEEE CVPR
 
@@ -647,61 +788,56 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\bookt
 abs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen274
-\lightrulewidth=\dimen275
-\cmidrulewidth=\dimen276
-\belowrulesep=\dimen277
-\belowbottomsep=\dimen278
-\aboverulesep=\dimen279
-\abovetopsep=\dimen280
-\cmidrulesep=\dimen281
-\cmidrulekern=\dimen282
-\defaultaddspace=\dimen283
-\@cmidla=\count313
-\@cmidlb=\count314
-\@aboverulesep=\dimen284
-\@belowrulesep=\dimen285
-\@thisruleclass=\count315
-\@lastruleclass=\count316
-\@thisrulewidth=\dimen286
+\heavyrulewidth=\dimen285
+\lightrulewidth=\dimen286
+\cmidrulewidth=\dimen287
+\belowrulesep=\dimen288
+\belowbottomsep=\dimen289
+\aboverulesep=\dimen290
+\abovetopsep=\dimen291
+\cmidrulesep=\dimen292
+\cmidrulekern=\dimen293
+\defaultaddspace=\dimen294
+\@cmidla=\count342
+\@cmidlb=\count343
+\@aboverulesep=\dimen295
+\@belowrulesep=\dimen296
+\@thisruleclass=\count344
+\@lastruleclass=\count345
+\@thisrulewidth=\dimen297
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.
 sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip56
-\bibsep=\skip57
+\bibhang=\skip57
+\bibsep=\skip58
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count317
+\c@NAT@ctr=\count346
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/silence\silenc
 e.sty
 Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error mes
 sages
-\sl@Save=\count318
-\sl@StateNumber=\count319
-\sl@MessageCount=\count320
-\sl@Casualties=\count321
-\sl@Filter=\toks42
-\sl@Message=\toks43
-\sl@UnexpandedMessage=\toks44
-\sl@Mess@ge=\toks45
-\sl@WarningCount=\count322
-\sl@WarningNumber=\count323
-\sl@WarningCasualties=\count324
-\sl@TempBOW=\toks46
-\sl@BankOfWarnings=\toks47
+\sl@Save=\count347
+\sl@StateNumber=\count348
+\sl@MessageCount=\count349
+\sl@Casualties=\count350
+\sl@Filter=\toks48
+\sl@Message=\toks49
+\sl@UnexpandedMessage=\toks50
+\sl@Mess@ge=\toks51
+\sl@WarningCount=\count351
+\sl@WarningNumber=\count352
+\sl@WarningCasualties=\count353
+\sl@TempBOW=\toks52
+\sl@BankOfWarnings=\toks53
 LaTeX Info: Redefining \GenericWarning on input line 433.
-\sl@ErrorCount=\count325
-\sl@ErrorNumber=\count326
-\sl@ErrorCasualties=\count327
-\sl@TempBOE=\toks48
-\sl@BankOfErrors=\toks49
+\sl@ErrorCount=\count354
+\sl@ErrorNumber=\count355
+\sl@ErrorCasualties=\count356
+\sl@TempBOE=\toks54
+\sl@BankOfErrors=\toks55
 LaTeX Info: Redefining \GenericError on input line 601.
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
-box.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count328
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
 n.sty
@@ -710,26 +846,27 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\captio
 n3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen287
-\captionmargin=\dimen288
-\caption@leftmargin=\dimen289
-\caption@rightmargin=\dimen290
-\caption@width=\dimen291
-\caption@indent=\dimen292
-\caption@parindent=\dimen293
-\caption@hangindent=\dimen294
+\caption@tempdima=\dimen298
+\captionmargin=\dimen299
+\caption@leftmargin=\dimen300
+\caption@rightmargin=\dimen301
+\caption@width=\dimen302
+\caption@indent=\dimen303
+\caption@parindent=\dimen304
+\caption@hangindent=\dimen305
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count329
-\c@continuedfloat=\count330
+\c@caption@flags=\count357
+\c@continuedfloat=\count358
+Package caption Info: float package is loaded.
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcap
 tion.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count331
+\c@subfigure=\count359
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count332
+\c@subtable=\count360
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip18
@@ -740,25 +877,17 @@ CVPR 8.5 x 11-Inch Proceedings Style `cvpr.sty'.
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumi
 tem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
-\labelindent=\skip58
-\enit@outerparindent=\dimen295
-\enit@toks=\toks50
-\enit@inbox=\box66
-\enit@count@id=\count333
-\enitdp@description=\count334
+\labelindent=\skip59
+\enit@outerparindent=\dimen306
+\enit@toks=\toks56
+\enit@inbox=\box74
+\enit@count@id=\count361
+\enitdp@description=\count362
 )) (preamble.tex)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyper
 ref.sty
 Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
 
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.
-sty
-Package: iftex 2024/12/12 v1.0g TeX engine tests
-)
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvse
-tkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys
 \kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
@@ -766,24 +895,7 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pd
 fescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxc
-mds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\p
-dftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\in
-fwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-))
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolo
 r.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
@@ -799,21 +911,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestri
 ng\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvop
-tions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-))
-\c@section@level=\count335
+)
+\c@section@level=\count363
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\st
 ringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen296
-\Hy@linkcounter=\count336
-\Hy@pagecounter=\count337
+\@linkdim=\dimen307
+\Hy@linkcounter=\count364
+\Hy@pagecounter=\count365
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1en
 c.def
@@ -825,7 +933,7 @@ Now handling font encoding PD1 ...
 alc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count338
+\Hy@SavedSpaceFactor=\count366
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc
 .def
@@ -869,17 +977,17 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 ))
-\c@Hy@tempcnt=\count339
+\c@Hy@tempcnt=\count367
 LaTeX Info: Redefining \url on input line 4763.
-\XeTeXLinkMargin=\dimen297
+\XeTeXLinkMargin=\dimen308
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitse
 t.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count340
-\Field@Width=\dimen298
-\Fld@charsize=\dimen299
+\Fld@menulength=\count368
+\Field@Width=\dimen309
+\Fld@charsize=\dimen310
 Package hyperref Info: Hyper figures OFF on input line 6042.
 Package hyperref Info: Link nesting OFF on input line 6047.
 Package hyperref Info: Hyper index ON on input line 6050.
@@ -893,21 +1001,25 @@ ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count341
-\c@Item=\count342
-\c@Hfootnote=\count343
+\Hy@abspage=\count369
+\c@Item=\count370
+\c@Hfootnote=\count371
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdft
 ex.def
 File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
-\Fld@listcount=\count344
-\c@bookmark@seq@number=\count345
-\Hy@SectionHShift=\skip59
+\Fld@listcount=\count372
+\c@bookmark@seq@number=\count373
+\Hy@SectionHShift=\skip60
+)
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.
+sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 6
-0.
+1.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.
 fd
@@ -916,44 +1028,44 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3ba
 ckend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count346
-\l__pdf_internal_box=\box67
+\l__color_backend_stack_int=\count374
+\l__pdf_internal_box=\box75
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 60.
-LaTeX Font Info:    ... okay on input line 60.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
+LaTeX Font Info:    ... okay on input line 61.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
 pp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count347
-\scratchdimen=\dimen300
-\scratchbox=\box68
-\nofMPsegments=\count348
-\nofMParguments=\count349
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count350
-\MPscratchDim=\dimen301
-\MPnumerator=\count351
-\makeMPintoPDFobject=\count352
-\everyMPtoPDFconversion=\toks52
+\scratchcounter=\count375
+\scratchdimen=\dimen311
+\scratchbox=\box76
+\nofMPsegments=\count376
+\nofMParguments=\count377
+\everyMPshowfont=\toks57
+\MPscratchCnt=\count378
+\MPscratchDim=\dimen312
+\MPnumerator=\count379
+\makeMPintoPDFobject=\count380
+\everyMPtoPDFconversion=\toks58
 )
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
 pstopdf-base.sty
@@ -972,20 +1084,20 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
-Package backref Info: ** backref set up for natbib ** on input line 60.
-Package hyperref Info: Link coloring ON on input line 60.
+Package backref Info: ** backref set up for natbib ** on input line 61.
+Package hyperref Info: Link coloring ON on input line 61.
  (main.out) (main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 63.
 
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.
 fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 63.
 
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.
@@ -993,7 +1105,7 @@ fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
-2.
+3.
 
 (C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.
 fd
@@ -1023,7 +1135,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 
 [3]) (sec/3_proposed_approach.tex (sec/../fig/ob_fig.tex
-<sec/../fig/CIFAR10_example.png, id=332, 24.09pt x 24.09pt>
+<sec/../fig/CIFAR10_example.png, id=352, 24.09pt x 24.09pt>
 File: sec/../fig/CIFAR10_example.png Graphic file (type png)
 <use sec/../fig/CIFAR10_example.png>
 Package pdftex.def Info: sec/../fig/CIFAR10_example.png  used on input line 407
@@ -1081,42 +1193,147 @@ Missing character: There is no ; in font nullfont!
 [7]
 
 ) (main.bbl (main.brf)
-\tf@brf=\write5
-\openout5 = `main.brf'.
+\tf@brf=\write6
+\openout6 = `main.brf'.
 
 
 
-[8])
+[8]) (sec/7_suppl.tex
 
 
 
 [9
 
-] (main.aux)
+]
+\pydata@fh@_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted=\write7
+\openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
+
+runsystem(latexminted config  --timestamp 20260513180647 FAD58DE7366495DB4650CF
+EFAC2FCD61)...executed.
+
+ (_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20260513180647 FAD58DE7366495DB4
+650CFEFAC2FCD61)...executed.
+
+
+(sec/_minted/default.style.minted)
+(sec/_minted/83C4F9C3D088783809DE93E5320CD4B9.highlight.minted
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 4
+.
+
+(C:\Users\Brandon Esebag\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.
+fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)) (sec/_minted/7F81C4969268D894AF49105464DD5AFF.highlight.minted)
+(sec/_minted/3F35F683616B2EB77B07F1A0ABC685B4.highlight.minted)
+(sec/_minted/7FA67E303E21C02DE0A6805995D86417.highlight.minted
+
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 2.
+) (sec/_minted/9E713F9A1072BC2E6B353EA74C847F13.highlight.minted)
+(sec/_minted/992684AF2585A2E61BBA0D7DF5E519FA.highlight.minted)
+(sec/_minted/7C20B14B5729B6D28DFF7E01DD1E3993.highlight.minted)
+(sec/_minted/56180412A9EC27C34A0EC748E1179FEE.highlight.minted
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.4 ...G{o}{=} \PYG{n}{q}\PYG{o}{.}\PYG{n}{unfold}
+                                                   [1
+
+
+])
+(sec/_minted/3AF8DD384052819CEA6A0ECAB9C43E82.highlight.minted)
+(sec/_minted/9C5420A70A979475AE42BB28CD97B13B.highlight.minted
+
+) (sec/unchosen_plots.tex (sec/../fig/lif_256_train_time.tex
+PGFPlots: reading {../output/train/data/obSTAtten_256_lif_cifar10_timing.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_256_lif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_256_lif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+) (sec/../fig/plif_256_train_time.tex
+PGFPlots: reading {../output/train/data/obSTAtten_256_plif_cifar10_timing.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_256_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_256_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+) (sec/../fig/plif_512_train_time.tex
+PGFPlots: reading {../output/train/data/obSTAtten_512_plif_cifar10_timing.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_512_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_512_plif_cifar10_timing.csv}
+Missing character: There is no ; in font nullfont!
+) (sec/../fig/plif_256_acc1_test.tex
+PGFPlots: reading {../output/train/data/obSTAtten_256_plif_cifar10_test.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_256_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_256_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+) (sec/../fig/lif_512_acc1_test.tex
+PGFPlots: reading {../output/train/data/obSTAtten_512_lif_cifar10_test.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_512_lif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_512_lif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+) (sec/../fig/plif_512_acc1_test.tex
+PGFPlots: reading {../output/train/data/obSTAtten_512_plif_cifar10_test.csv}
+
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/STAtten_512_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+PGFPlots: reading {../output/train/data/SDT_512_plif_cifar10_test.csv}
+Missing character: There is no ; in font nullfont!
+)))
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79 \end{document}
+                    [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79 \end{document}
+                    [3]
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.79 \end{document}
+                    [4] (main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 01856E9BA7C3B1DD4DC225A49FA95E56;9828
-(rerunfilecheck)             After:  95415B5277397E42F4305ABC470E5826;9876.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: F9A5356BE587896004C31395D12CADAE;10847.
 Package rerunfilecheck Info: File `main.brf' has not changed.
 (rerunfilecheck)             Checksum: 9D272CEF553101FDE5F341345E41B00A;2665.
  ) 
 Here is how much of TeX's memory you used:
- 34644 strings out of 473497
- 809134 string characters out of 5708694
- 1389894 words of memory out of 5000000
- 57157 multiletter control sequences out of 15000+600000
- 589456 words of font info for 104 fonts, out of 8000000 for 9000
+ 38910 strings out of 473497
+ 933300 string characters out of 5708694
+ 1709244 words of memory out of 5000000
+ 61253 multiletter control sequences out of 15000+600000
+ 592474 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,19n,107p,1145b,2323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,19n,107p,1145b,2355s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/Brandon Esebag/AppData/Local/Pro
@@ -1135,14 +1352,16 @@ s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Brandon Esebag/AppD
 ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Us
 ers/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/sy
 mbols/msbm7.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/urw-base35/ucrr8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Program
-s/MiKTeX/fonts/type1/public/urw-base35/utmb8a.pfb><C:/Users/Brandon Esebag/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/utmr8a.pfb><C:/Users/Br
-andon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/utmri8
-a.pfb>
-Output written on main.pdf (9 pages, 320368 bytes).
+pe1/public/urw-base35/ucrb8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/urw-base35/ucrr8a.pfb><C:/Users/Brandon Esebag/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/ucrro8a.pfb><C:/Users/B
+randon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public/urw-base35/utmb8
+a.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/urw-base35/utmr8a.pfb><C:/Users/Brandon Esebag/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/urw-base35/utmri8a.pfb>
+Output written on main.pdf (13 pages, 391988 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 434 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 577 PDF objects out of 1000 (max. 8388607)
+ 114 named destinations out of 1000 (max. 500000)
+ 474 words of extra memory for PDF output out of 10000 (max. 10000000)
 

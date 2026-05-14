@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{}\PYGZsh{} obSTAtten Attention Mode \PYGZhy{}\PYGZhy{}}
+	\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{overlapping block STAtten}\PYG{l+s+s2}{\PYGZdq{}}
+
+        \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{attention\PYGZus{}mode} \PYG{o}{==}
+        		\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{obSTAtten}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{:}
+        		
+            \PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dvs}\PYG{p}{:}
+                \PYG{n}{scaling\PYGZus{}factor} \PYG{o}{=} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}
+                \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{p}{(}\PYG{n}{H} \PYG{o}{*} \PYG{n}{H} \PYG{o}{*} \PYG{o}{.}\PYG{o}{.}\PYG{o}{.}
+                \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{)}
+                		
+            \PYG{k}{else}\PYG{p}{:}
+                \PYG{n}{scaling\PYGZus{}factor} \PYG{o}{=} \PYG{l+m+mi}{1} \PYG{o}{/} \PYG{n}{H}
+\end{MintedVerbatim}

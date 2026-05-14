@@ -1,16 +1,182 @@
 \documentclass[../main.tex]{subfiles}
 \graphicspath{{\subfix{}}}
 
+\ifdefined\subfilesmaindocument\else
+  \renewcommand{\datapath}{../../output/train/data}
+\fi
+
 \begin{document}
 
 \clearpage
 \setcounter{page}{1}
 \maketitlesupplementary
 
+\noindent\textbf{GitHub Repository:}https://github.com/rancorjoy/obSTAtten\\
 
-\section{Supplementary Material}
-\label{sec:suppl}
+\section{Code Modifications}
+The following section details the modifications that were made to the original code-base of STAtten to add the attention model obSTAtten. All changes can be seen in the GitHub Repository linked above. Since it is hard to fit longer lines of code into CVPR format, tab indented lines of code should be assumed to belong to their parent (which won't be tab indented), to distinguish actual indentation from linebreaks, there will be no empty lines within a line of code. Naturally most of the comments do not fit inside to confines of the code blocks, to see the full and commented code please view the GitHub Repository linked above.
 
-\noindent Material Here
+\subsection{Modifications to train.py}
+Line 261 of train.py was replaced with the following code to ensure the option 'obSTAtten' for the parameter 'attention\_mode' would be valid.
 
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+parser.add_argument("--attention_mode",
+	type=str, default="STAtten",
+	help='choose one of methods:
+   	STAtten, obSTAtten, SDT')    
+\end{minted}
+
+\noindent A few bugs were fixed as well, however these seem to have been rendered non-functional at some point in the past and they do not affect the functioning of obSTAtten. These lines of code are marked by comments in the Github Repository.
+
+\subsection{Modifications to ms\_conv.py}
+First the line of code shown below asserts the available attention modes, another mode needs to be added to this list or else the code will return without running for any other option entered.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+assert self.attention_mode not in 
+	["STAtten, SDT"]   
+\end{minted}
+
+\noindent Into this list the string "obSTAtten" is added so that it becomes a valid attention argument. Now obSTAtten can be implemented.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+assert self.attention_mode not in 
+	["STAtten, obSTAtten, SDT"]   
+\end{minted}
+
+\noindent Next the conditional statement that forms the STAtten attention model selection is copied, it starts with the conditional statement ``if self.attention\_mode == ``STAtten": ". This entire block is copied and the top comment and conditional string are swapped. Now if nothing else changes obSTAtten will run and perform exactly equivalent to STAtten.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+## obSTAtten Attention Mode -- 
+	"overlapping block STAtten"
+        
+        if self.attention_mode == 
+        		"obSTAtten":
+        		
+            if self.dvs:
+                scaling_factor = ...
+                1 / (H * H * ...
+                self.chunk_size)
+                		
+            else:
+                scaling_factor = 1 / H
+\end{minted}
+
+\noindent Finally edits can be made to the code to allow for overlapping blocks. First the number of code blocks needs to be corrected, there will be a line of code that looks like the one shown below:
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# Vectorized Attention
+num_chunks = T // self.chunk_size  
+\end{minted}
+
+\noindent This block should be replaced with the code shown below to create the correct number of blocks.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# This model produces number blocks ...
+num_chunks = T - self.chunk_size + 1
+\end{minted}
+
+\noindent Next the attention model combines all data in contiguous chunks, as shown below. This cannot be used in obSTAtten because overlapping blocks are not contiguous. To solve this the function view() is replaced with the function unfold().
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# Reshape q, k, v to process all ...
+q_chunks = q.view(num_chunks, 
+self.chunk_size, B, self.num_heads, N, 
+head_dim).permute(0, 2, 3, 1, 4, 5)
+
+k_chunks = k.view(num_chunks, 
+self.chunk_size, B, self.num_heads, N, 
+head_dim).permute(0, 2, 3, 1, 4, 5)
+
+v_chunks = v.view(num_chunks, 
+self.chunk_size, B, self.num_heads, N, 
+head_dim).permute(0, 2, 3, 1, 4, 5)
+\end{minted}
+
+\noindent The function unfold() produces an object with the same dimensions however they are ordered incorrectly, to reorder them (such that they match the output of view()) the code shown below is used.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# Replace .view() with .unfold() ...
+# .unfold() needs dimension, size ...
+q_chunks = q.unfold
+	(0, self.chunk_size, 1)
+
+k_chunks = k.unfold
+	(0, self.chunk_size, 1)
+
+v_chunks = v.unfold
+	(0, self.chunk_size, 1)
+	
+# shape: (num_chunks, B, num_heads, ...
+
+# STAtten permutes (num_chunks, ...
+# .unfold() puts chunk_size at ...
+q_chunks = q_chunks.permute
+	(0, 1, 2, 5, 3, 4)
+	
+k_chunks = k_chunks.permute
+	(0, 1, 2, 5, 3, 4)
+	
+v_chunks = v_chunks.permute
+	(0, 1, 2, 5, 3, 4)
+\end{minted}
+
+
+
+
+\noindent The last modification to the attention algorithm is simply an insertion. There is a section near the bottom of STAtten/obSTAtten that contains the following code, the comment ``EMPTY SPACE" is not present in the code but marks the space where the insertion needs to be made.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# Reshape back to separate temporal ...
+out = out.reshape(num_chunks, B, 
+	self.num_heads,self.chunk_size, 
+	N, head_dim).permute
+	(0, 3, 1, 2, 4, 5)
+# Flatten chunks back to T: (T, ...
+output = out.reshape
+	(T, B, self.num_heads, N, 
+	head_dim)
+
+# EMPTY SPACE
+
+x = output.transpose(4,3).
+	reshape(T, B, C, N).
+	
+	contiguous() # (T, B, head, ...
+x = self.attn_lif(x).
+	reshape(T, B, C, H, W)
+	
+if self.dvs:
+	x = x.mul(x_pool)
+   	x = x + x_pool
+\end{minted}
+
+\noindent The insertion is a block of code that will average all the context gathered for timestep across all instances of that timestep, the code is shown below. With the addition of this code obSTAtten should be functional, got to the GitHub Repository readme file to get instructions for running the code, as well as viewing the output log files visually using the included Jupyter Notebook.
+\begin{minted}[bgcolor=lightgray!15!white]{python}
+# Unlike in STAtten where each time ...
+# The output from each time-step  ...
+output_acc = torch.zeros
+	(T, B, self.num_heads, 
+	N, head_dim, device=x.device, 
+	dtype=out.dtype)
+	
+count = torch.zeros(T, device=x.device, 
+	dtype=out.dtype)
+
+for i in range(num_chunks):
+	# chunk i covers timesteps ...
+	output_acc
+		[i:i+self.chunk_size] 
+		+= out[i].permute
+		(3, 0, 1, 2, 4)
+		
+	count[i : i + self.chunk_size] 
+		+= 1
+
+	# Divide each timestep by ...
+	# count shape: (T,) -> ...
+	output = output_acc / 
+		count.reshape
+		(T, 1, 1, 1, 1)
+\end{minted}
+
+
+\section{Unused Figures and Observations}
+From the gathered data several figures were generated which could not be used in the main paper. This is due to the stringent 8-page limit of the CVPR format paired with the fact that these figures are not all that interesting on their own. They do show that the behavior of each version of STAtten and obSTAtten is different, which confirms the code is running correctly in both cases.
+
+\subsection{obSTAtten Training Time per Epoch}
+\par Notice from the training time vs epoch plots (the first three) how obSTAtten is typically the slowest to train. This makes sense because its code is technically more complex than STAtten's code given that there is an insertion and both replacements are longer sections of code than the originals were. obSTAtten is only marginally slower to train whith dim-256, but when dim-512 the model is far slower (but only in the later epochs).
+
+\input{unchosen_plots}
 \end{document}

@@ -1,0 +1,24 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Reshape back to separate temporal ...}
+\PYG{n}{out} \PYG{o}{=} \PYG{n}{out}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{num\PYGZus{}chunks}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,}
+	\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{num\PYGZus{}heads}\PYG{p}{,}\PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{chunk\PYGZus{}size}\PYG{p}{,}
+	\PYG{n}{N}\PYG{p}{,} \PYG{n}{head\PYGZus{}dim}\PYG{p}{)}\PYG{o}{.}\PYG{n}{permute}
+	\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Flatten chunks back to T: (T, ...}
+\PYG{n}{output} \PYG{o}{=} \PYG{n}{out}\PYG{o}{.}\PYG{n}{reshape}
+	\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{num\PYGZus{}heads}\PYG{p}{,} \PYG{n}{N}\PYG{p}{,}
+	\PYG{n}{head\PYGZus{}dim}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} EMPTY SPACE}
+
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{output}\PYG{o}{.}\PYG{n}{transpose}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+m+mi}{3}\PYG{p}{)}\PYG{o}{.}
+	\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{C}\PYG{p}{,} \PYG{n}{N}\PYG{p}{)}\PYG{o}{.}
+	
+	\PYG{n}{contiguous}\PYG{p}{(}\PYG{p}{)} \PYG{c+c1}{\PYGZsh{} (T, B, head, ...}
+\PYG{n}{x} \PYG{o}{=} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{attn\PYGZus{}lif}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{o}{.}
+	\PYG{n}{reshape}\PYG{p}{(}\PYG{n}{T}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{C}\PYG{p}{,} \PYG{n}{H}\PYG{p}{,} \PYG{n}{W}\PYG{p}{)}
+	
+\PYG{k}{if} \PYG{n+nb+bp}{self}\PYG{o}{.}\PYG{n}{dvs}\PYG{p}{:}
+	\PYG{n}{x} \PYG{o}{=} \PYG{n}{x}\PYG{o}{.}\PYG{n}{mul}\PYG{p}{(}\PYG{n}{x\PYGZus{}pool}\PYG{p}{)}
+   	\PYG{n}{x} \PYG{o}{=} \PYG{n}{x} \PYG{o}{+} \PYG{n}{x\PYGZus{}pool}
+\end{MintedVerbatim}
